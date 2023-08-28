@@ -6,12 +6,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import util.ElementHelper;
 import util.ElementLocator;
 
-public class LoginPages {
+public class LoginPages extends ElementHelper {
     AppiumDriver driver;
     WebDriverWait wait;
     ElementHelper elementHelper;
 
     public LoginPages(AppiumDriver driver){
+        super(driver);
         this.driver = driver;
         this.wait = new WebDriverWait(driver,15);
         this.elementHelper = new ElementHelper(driver);
@@ -22,7 +23,8 @@ public class LoginPages {
     }
 
     public void enterEmailInformation() {
-        elementHelper.sendKeys(ElementLocator.EDIT_TEXT_LOGIN_MAIL,"edtest@edtest.com");
+        //elementHelper.sendKeys(ElementLocator.EDIT_TEXT_LOGIN_MAIL,"edtest@edtest.com");
+        sendKeys(ElementLocator.EDIT_TEXT_LOGIN_MAIL,"edtest@edtest.com");
     }
 
     public void enterEmailPassword() {
@@ -30,7 +32,8 @@ public class LoginPages {
     }
 
     public void clickOnLoginButton() {
-        wait.until(ExpectedConditions.presenceOfElementLocated(ElementLocator.BTN_LOGIN)).click();
+        //wait.until(ExpectedConditions.presenceOfElementLocated(ElementLocator.BTN_LOGIN)).click();
+        click(ElementLocator.BTN_LOGIN);
     }
 
     public void checkIfReachedLiveScreen() {
