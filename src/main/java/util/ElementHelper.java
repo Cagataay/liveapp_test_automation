@@ -6,11 +6,9 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -18,15 +16,17 @@ import org.testng.Assert;
 import java.time.Duration;
 import java.util.List;
 
+import static java.lang.Math.abs;
 
-public class ElementHelper {
+
+public class ElementHelper extends ElementLocator {
     AppiumDriver driver;
     WebDriverWait wait;
     Actions action;
 
     public ElementHelper(AppiumDriver driver){
         this.driver = driver;
-        this.wait = new WebDriverWait(driver,(10));
+        this.wait = new WebDriverWait(driver,(20));
         this.action = new Actions(driver);
     }
     public WebElement presenceElement(By key){
@@ -167,6 +167,22 @@ public class ElementHelper {
 
         TouchAction action = new TouchAction(driver);
         action.tap(PointOption.point(centerX, centerY)).perform();
+    }
+
+    public void waitUntilElementIsVisible(WebElement element , int time){
+
+        WebDriverWait wait = new WebDriverWait(driver, time);
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void HoldAndRelease(By by){
+
+        Actions action = new Actions(driver);
+        WebElement element = driver.findElement(by);
+        waitUntilElementIsVisible(element,20);
+        action.clickAndHold(element).perform();
+        setWait(6);
+        action.release(element).perform();
     }
 
 }

@@ -24,11 +24,11 @@ public class LoginPages extends ElementHelper {
 
     public void enterEmailInformation() {
         //elementHelper.sendKeys(ElementLocator.EDIT_TEXT_LOGIN_MAIL,"edtest@edtest.com");
-        sendKeys(ElementLocator.EDIT_TEXT_LOGIN_MAIL,"edtest@edtest.com");
+        sendKeys(ElementLocator.EDIT_TEXT_LOGIN_MAIL,"tester052@test.com");
     }
 
     public void enterEmailPassword() {
-        elementHelper.sendKeys(ElementLocator.EDIT_TEXT_LOGIN_PASSWORD,"edtestedtest");
+        elementHelper.sendKeys(ElementLocator.EDIT_TEXT_LOGIN_PASSWORD,"test1234");
     }
 
     public void clickOnLoginButton() {

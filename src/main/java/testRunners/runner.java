@@ -9,12 +9,12 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {"src/test/java/features"},
         glue = {"stepDefinitions", "util"},
-        tags = "", //@login or @logintest şeklinde senaryolar şekillendirilebilir.
+        tags = "@message", //@login or @logintest şeklinde senaryolar şekillendirilebilir.
         plugin = {
                 "summary", "pretty", "html:Reports/CucumberReport/Reports.html",
         }
 )
 public class runner extends AbstractTestNGCucumberTests {
-    static AppiumDriver driver = DriverFactory.getDriver();
 
+    static AppiumDriver driver = DriverFactory.getDriver();
 }

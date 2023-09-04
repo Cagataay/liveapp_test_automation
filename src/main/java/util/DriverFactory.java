@@ -23,8 +23,10 @@ public class DriverFactory {
             capabilities.setCapability("udid", "emulator-5554");
             capabilities.setCapability("appPackage","com.superlive.liveapp");
             capabilities.setCapability("appActivity","com.superlive.liveapp.ui.activities.splash.SplashActivity");
-            //capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+            capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
             //capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
+            capabilities.setCapability("automationName","UIAutomator2");
+
         } else if (browser.equals("iOS")) {
             capabilities.setCapability("platformName", "iOS");
             capabilities.setCapability("udid", "");
@@ -32,7 +34,7 @@ public class DriverFactory {
             capabilities.setCapability("appActivity", "");
         }
         try {
-            driver = new AppiumDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+            driver = new AppiumDriver(new URL("http://0.0.0.0:4723"), capabilities);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
@@ -46,6 +48,4 @@ public class DriverFactory {
     public static AppiumDriver getDriver() {
         return driver;
     }
-
-
 }
