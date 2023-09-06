@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.LoginPages;
@@ -71,4 +72,5 @@ public class LoginStepDefinitions {
     @When("Telefon numarasina gelen dogrulama kodu girilir")
     public void telefonNumarasinaGelenDogrulamaKoduGirilir() {loginPages.enterVerificationCodeReceivedOnPhoneNumber();
     }
+
 }

@@ -48,7 +48,6 @@ public class ElementLocator {
     public static final By SEND_MEDIA_BUTTON=MobileBy.id("com.superlive.liveapp:id/imgCameraMessage");
     public static final By SEND_TEXT_AREA=MobileBy.id("com.superlive.liveapp:id/edtMessage");
     public static final By SEND_MESSAGE_BUTTON=MobileBy.id("com.superlive.liveapp:id/imgSend");
-
     public static final By INBOX_USER=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Tester699')]"); //Text can be changed
     public static final By PRIVATE_CALL_VOICE_BUTTON=MobileBy.id("com.superlive.liveapp:id/voiceCallStartButton");
     public static final By PRIVATE_CALL_VIDEO_BUTTON=MobileBy.id("com.superlive.liveapp:id/videoCallStartButton");
@@ -60,4 +59,36 @@ public class ElementLocator {
     public static final By OVERLAY_DELETE_CONVERSATION_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Delete conversation')]");
     public static final By OVERLAY_CANCEL_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Cancel')]");
     public static final By PROFILE_BACK_BUTTON=MobileBy.id("com.superlive.liveapp:id/backButton");
+    public static final By INBOX_PIN_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Pin')]");
+    public static final By INBOX_UNPIN_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Unpin')]");
+    public static final By MARK_AS_UNREAD_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Mark as unread')]");
+    public static final By MARK_AS_READ_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Mark as read')]");
+    public static final By CAMERA_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Camera')]");
+    public static final By ALLOW_WHILE_USING_THE_APP=MobileBy.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button");
+    public static final By PHOTO_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Photo')]");
+    public static final By TAKE_A_PHOTO_BUTTON=MobileBy.id("com.android.camera2:id/shutter_button");
+    public static final By CONFIRM_PHOTO_BUTTON=MobileBy.id("com.android.camera2:id/done_button");
+    public static final By SEND_TO_PERSON_BUTTON=MobileBy.id("com.superlive.liveapp:id/sendButton");
+    public static final By SEND_MEDIA_TO_USER=MobileBy.id("com.superlive.liveapp:id/sendButtonLayout");
+    public static final By GIFT_PRICE_ELEMENT=MobileBy.xpath("//android.widget.TextView[contains(@text, '8')]");
+    public static final By CHAT_GIFT_BUTTON=MobileBy.id("com.superlive.liveapp:id/imgGift");
+    public static final By AUDIO_MESSAGE_BUTTON=MobileBy.id("com.superlive.liveapp:id/imgAudioMessage");
+    public static final By PLAY_BUTTON=MobileBy.id("com.superlive.liveapp:id/btnPlay");
+    public static final By MESSAGE_SEEN_STATE=MobileBy.id("com.superlive.liveapp:id/ivMessageSeenState");
+    public static final By PHOTO_NUMBER_ELEMENT=MobileBy.id("com.superlive.liveapp:id/txtPhotoNumber");
+    public static final By PHOTO_MESSAGE_ELEMENT=MobileBy.id("com.superlive.liveapp:id/imgPhotoMessage");
+    public static final By SEND_GIFT_IMAGE=MobileBy.id("com.superlive.liveapp:id/imgSendGift");
+    public static final By COIN_IMAGE=MobileBy.id("com.superlive.liveapp:id/imgCoin");
+    public static final By GIFT_IN_CHAT=MobileBy.id("com.superlive.liveapp:id/imgGiftThumbnail");
+    public static final By GIFT_PRICE_IN_CHAT=MobileBy.id("com.superlive.liveapp:id/tvGiftPrice");
+    public static final By AUDIO_MESSAGE_BAR=MobileBy.id("com.superlive.liveapp:id/seekBar");
+    public static final By AUDIO_MESSAGE_TIMER=MobileBy.id("com.superlive.liveapp:id/tvTime");
+    public static final By INBOX_PIN_IMAGE=MobileBy.id("com.superlive.liveapp:id/messagePinImage");
+    public static final By VIP_GIFT_BUTTON=MobileBy.id("com.superlive.liveapp:id/vipBadgeVipFilterType");
+    public static final By TOTAL_COIN_AMOUNT=MobileBy.id("com.superlive.liveapp:id/messageSendGiftTotalCoin");
+    public static final By COIN_ICON_IN_OVERLAY=MobileBy.id("com.superlive.liveapp:id/messageSendGiftCoinIcon");
+    public static final By BUY_COINS_BUTTON_IN_OVERLAY=MobileBy.id("com.superlive.liveapp:id/messageSendGiftPurchaseCoin");
+    public static final By HYBRID_PURCHASE_CLOSE_BUTTON=MobileBy.id("com.superlive.liveapp:id/hybridPurchaseClose");
+    public static final By CONFIRM_POPUP_BUTTON=MobileBy.id("android:id/button1");
+    public static final By TOUCH_OUTSIDE_AREA=MobileBy.id("com.superlive.liveapp:id/touch_outside");
 }

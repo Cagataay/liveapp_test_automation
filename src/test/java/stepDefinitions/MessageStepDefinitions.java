@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.MessagePages;
@@ -14,34 +15,19 @@ public class MessageStepDefinitions {
         messagePages.goToInboxPage();
     }
 
-    @Then("check inbox page title")
-    public void check_inbox_page_title() {
-       messagePages.verifyInboxPageTitle();
+    @Then("check inbox elements")
+    public void checkInboxElements() {
+        messagePages.checkInboxPageElements();
     }
 
-    @Then("check inbox online status")
-    public void check_inbox_online_status() {
-        messagePages.verifyInboxOnlineStatus();
+    @Then("pin and unpin inbox message")
+    public void pinAndUnpinInboxMessage() {
+        messagePages.pinAndUnpinMessage();
     }
 
-    @Then("check inbox profile picture")
-    public void check_inbox_profile_picture() {
-        messagePages.checkInboxProfilePicture();
-    }
-
-    @Then("check inbox livestream button")
-    public void checkInboxLivestreamButton() {
-        messagePages.verifyLiveStreamButtonInbox();
-    }
-
-    @Then("check user level badge")
-    public void check_user_level_badge() {
-        messagePages.checkUserLevelBadge();
-    }
-
-    @Then("check inbox timestamp")
-    public void checkInboxTimestamp() {
-        messagePages.checkInboxMessageDate();
+    @Then("mark as unread and read the message")
+    public void markAsUnreadAndReadTheMessage() {
+        messagePages.markTheInboxMessageAsUnreadAndRead();
     }
 
     @When("check superlive official account")
@@ -57,6 +43,11 @@ public class MessageStepDefinitions {
     @Then("check support account")
     public void checkSupportAccount() {
         messagePages.verifyInboxSupportAccount();
+    }
+
+    @And("send message to support account")
+    public void sendMessageToSupportAccount() {
+        messagePages.sendMessageToSupportAccount();
     }
 
     @Then("scroll inbox page")
@@ -107,5 +98,80 @@ public class MessageStepDefinitions {
     @When("send text message to user")
     public void sendTextMessageToUser() {
         messagePages.sendTextMessage();
+    }
+
+    @And("check message date and seen info")
+    public void checkMessageDateAndSeenInfo() {
+        messagePages.checkMessageInfo();
+    }
+
+    @Then("send photo message to user")
+    public void sendPhotoMessageToUser() {
+        messagePages.sendPhotoMessage();
+    }
+
+    @And("check photo message info")
+    public void checkPhotoMessageInfo() {
+        messagePages.checkPhotoMessageInfo();
+    }
+
+    @Then("send premium photo to user")
+    public void sendPremiumPhotoToUser() {
+        messagePages.sendPremiumPhotoMessage();
+    }
+
+    @And("check premium photo info")
+    public void checkPremiumPhotoInfo() {
+        messagePages.checkPremiumPhotoInformation();
+    }
+
+    @Then("send gift to user")
+    public void sendGiftToUser() {
+        messagePages.sendGiftMessage();
+    }
+
+    @And("check gift message info")
+    public void checkGiftMessageInfo() {
+        messagePages.checkGiftMessageInformation();
+    }
+
+    @Then("send audio message to user")
+    public void sendAudioMessageToUser() {
+        messagePages.sendAudioMessage();
+    }
+
+    @And("play audio message")
+    public void playAudioMessage() {
+        messagePages.playTheAudioMessage();
+    }
+
+    @And("check audio message info")
+    public void checkAudioMessageInfo() {
+        messagePages.checkAudioMessageInformation();
+    }
+
+    @When("open gift overlay in chat")
+    public void openGiftOverlayInChat() {
+        messagePages.clickGiftButtonInChat();
+    }
+
+    @Then("check gift overlay elements")
+    public void checkGiftOverlayElements() {
+        messagePages.checkElementsInGiftOverlay();
+    }
+
+    @Then("click buy coins button")
+    public void clickBuyCoinsButton() {
+        messagePages.clickBuyCoinsButtonInGiftOverlay();
+    }
+
+    @Then("close payment popup")
+    public void closePaymentPopup() {
+        messagePages.closeHybridPurchasePage();
+    }
+
+    @And("scroll message page")
+    public void scrollMessagePage() {
+        messagePages.scrollInMessagePage();
     }
 }

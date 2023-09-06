@@ -1,14 +1,12 @@
 package util;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -170,19 +168,41 @@ public class ElementHelper extends ElementLocator {
     }
 
     public void waitUntilElementIsVisible(WebElement element , int time){
-
         WebDriverWait wait = new WebDriverWait(driver, time);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void HoldAndRelease(By by){
-
+    public void holdTheElement(By by){
         Actions action = new Actions(driver);
         WebElement element = driver.findElement(by);
         waitUntilElementIsVisible(element,20);
         action.clickAndHold(element).perform();
-        setWait(6);
+    }
+
+    public void releaseTheElement(By by){
+        Actions action = new Actions(driver);
+        WebElement element = driver.findElement(by);
+        waitUntilElementIsVisible(element,20);
         action.release(element).perform();
     }
 
+    public void holdAndRelease(By by){
+        Actions action = new Actions(driver);
+        WebElement element = driver.findElement(by);
+        waitUntilElementIsVisible(element,20);
+        action.clickAndHold(element).perform();
+        setWait(6000);
+        action.release(element).perform();
+    }
+
+    public boolean isDisplayed(By by){
+        try{
+            WebElement element = driver.findElement(by);
+            waitUntilElementIsVisible(element,7);
+            return element.isDisplayed();
+        }
+        catch (Exception e){
+            return false;
+        }
+    }
 }

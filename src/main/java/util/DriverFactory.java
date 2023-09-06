@@ -26,6 +26,7 @@ public class DriverFactory {
             capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
             //capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
             capabilities.setCapability("automationName","UIAutomator2");
+            //capabilities.setCapability("deviceName","Galaxy A23");
 
         } else if (browser.equals("iOS")) {
             capabilities.setCapability("platformName", "iOS");
