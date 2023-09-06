@@ -41,7 +41,7 @@ public class ElementLocator {
     public static final By MESSAGE_DATE=MobileBy.id("com.superlive.liveapp:id/messageDate");
     public static final By CHAT_TIMESTAMP=MobileBy.id("com.superlive.liveapp:id/date");
     public static final By CONVERSATION_USER_NAME=MobileBy.id("com.superlive.liveapp:id/conversationUserName");
-    public static final By INBOX_SUPPORT_ACCOUNT=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Support Specialist')]"); //'VIP Support'
+    public static final By INBOX_SUPPORT_ACCOUNT=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Support Specialist')]"); //or 'VIP Support'
     public static final By CONVERSATION_COIN_RECOVERY_TITLE=MobileBy.id("com.superlive.liveapp:id/conversationCoinRecoveryTitle");
     public static final By CONVERSATION_COIN_RECOVERY_ARROW=MobileBy.id("com.superlive.liveapp:id/conversationCoinRecoveryArrow");
     public static final By CONVERSATION_USER_LAST_SEEN=MobileBy.id("com.superlive.liveapp:id/conversationUserLastSeen");

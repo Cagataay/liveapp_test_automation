@@ -1,4 +1,4 @@
-
+@message
   Feature: Check inbox and messages page
     Scenario: Check inbox page elements
       When go to inbox page
@@ -48,7 +48,6 @@
       And play audio message
       And check audio message info
 
-    @message
     Scenario: Check gift overlay in chat
       When open gift overlay in chat
       Then check gift overlay elements
