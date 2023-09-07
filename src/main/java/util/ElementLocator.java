@@ -54,6 +54,7 @@ public class ElementLocator {
     public static final By CHAT_USER_OPTION_BUTTON=MobileBy.id("com.superlive.liveapp:id/imgDownArrow");
     public static final By OVERLAY_VIEW_PROFILE_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'View Profile')]");
     public static final By OVERLAY_MUTE_CALLS_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Mute Calls')]");
+    public static final By OVERLAY_UNMUTE_CALLS_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Unmute Calls')]");
     public static final By OVERLAY_BLOCK_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Block')]");
     public static final By OVERLAY_REPORT_AND_BLOCK_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Report and Block')]");
     public static final By OVERLAY_DELETE_CONVERSATION_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Delete conversation')]");
@@ -66,6 +67,7 @@ public class ElementLocator {
     public static final By CAMERA_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Camera')]");
     public static final By ALLOW_WHILE_USING_THE_APP=MobileBy.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button");
     public static final By PHOTO_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Photo')]");
+    public static final By VIDEO_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Video')]");
     public static final By TAKE_A_PHOTO_BUTTON=MobileBy.id("com.android.camera2:id/shutter_button");
     public static final By CONFIRM_PHOTO_BUTTON=MobileBy.id("com.android.camera2:id/done_button");
     public static final By SEND_TO_PERSON_BUTTON=MobileBy.id("com.superlive.liveapp:id/sendButton");
@@ -91,4 +93,10 @@ public class ElementLocator {
     public static final By HYBRID_PURCHASE_CLOSE_BUTTON=MobileBy.id("com.superlive.liveapp:id/hybridPurchaseClose");
     public static final By CONFIRM_POPUP_BUTTON=MobileBy.id("android:id/button1");
     public static final By TOUCH_OUTSIDE_AREA=MobileBy.id("com.superlive.liveapp:id/touch_outside");
+    public static final By PHOTO_MESSAGE_TITLE=MobileBy.id("com.superlive.liveapp:id/tvTitle");
+    public static final By MEDIA_MESSAGE_DETAIL =MobileBy.id("com.superlive.liveapp:id/tvTitleDetail");
+    public static final By MEDIA_IN_DETAIL =MobileBy.id("com.superlive.liveapp:id/ivAlbumMedia");
+    public static final By DETAIL_BACK_BUTTON=MobileBy.id("com.superlive.liveapp:id/imgBack");
+    public static final By TEXT_VIDEO_NUMBER=MobileBy.id("com.superlive.liveapp:id/txtVideoNumber");
+    public static final By VIDEO_MESSAGE_ICON=MobileBy.id("com.superlive.liveapp:id/imgVideoMessage");
 }

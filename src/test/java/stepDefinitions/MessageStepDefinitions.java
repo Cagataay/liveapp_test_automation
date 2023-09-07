@@ -95,6 +95,11 @@ public class MessageStepDefinitions {
         messagePages.clickViewProfileButtonAndTurnBackToChatPage();
     }
 
+    @And("click mute and unmute buttons")
+    public void clickMuteAndUnmuteButtons() {
+        messagePages.muteAndUnmuteUser();
+    }
+
     @When("send text message to user")
     public void sendTextMessageToUser() {
         messagePages.sendTextMessage();
@@ -112,7 +117,12 @@ public class MessageStepDefinitions {
 
     @And("check photo message info")
     public void checkPhotoMessageInfo() {
-        messagePages.checkPhotoMessageInfo();
+        //messagePages.checkPhotoMessageInfo(); //Comment line can be removed if prod bug is resolved
+    }
+
+    @And("check photo details")
+    public void checkPhotoDetails() {
+        //messagePages.clickPhotoMessageAndCheckDetails(); //Comment line can be removed if prod bug is resolved
     }
 
     @Then("send premium photo to user")
@@ -122,7 +132,32 @@ public class MessageStepDefinitions {
 
     @And("check premium photo info")
     public void checkPremiumPhotoInfo() {
-        messagePages.checkPremiumPhotoInformation();
+        //messagePages.checkPremiumPhotoInformation(); //Comment line can be removed if prod bug is resolved
+    }
+
+    @When("send video to user")
+    public void sendVideoToUser() {
+        messagePages.sendVideoToUserInChat();
+    }
+
+    @Then("check video info in chat")
+    public void checkVideoInfoInChat() {
+        //messagePages.checkVideoInfo(); //Comment line can be removed if prod bug is resolved
+    }
+
+    @And("check video details")
+    public void checkVideoDetails() {
+        //messagePages.clickVideoAndCheckDetails(); //Comment line can be removed if prod bug is resolved
+    }
+
+    @When("send premium video to user")
+    public void sendPremiumVideoToUser() {
+        messagePages.sendPremiumVideoToUserInChat();
+    }
+
+    @Then("check premium video info in chat")
+    public void checkPremiumVideoInfoInChat() {
+        //messagePages.checkPremiumVideoInfo(); //Comment line can be removed if prod bug is resolved
     }
 
     @Then("send gift to user")

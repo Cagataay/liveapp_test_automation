@@ -60,7 +60,7 @@ public class MessagePages extends ElementHelper {
     }
 
     public void verifyInboxModerationAccount() {
-        setWait(1000);
+        setWait(2000);
         checkVisible(INBOX_MODERATION_ACCOUNT);
         click(INBOX_MODERATION_ACCOUNT);
         checkVisible(MESSAGE_DATE);
@@ -135,6 +135,13 @@ public class MessagePages extends ElementHelper {
         click(PROFILE_BACK_BUTTON);
     }
 
+    public void muteAndUnmuteUser(){
+        click(OVERLAY_MUTE_CALLS_BUTTON);
+        setWait(1000);
+        click(CHAT_USER_OPTION_BUTTON);
+        click(OVERLAY_UNMUTE_CALLS_BUTTON);
+    }
+
     public void sendTextMessage() {
         click(SEND_TEXT_AREA);
         sendKeys(SEND_TEXT_AREA, "I'm sending a text message to user");
@@ -170,8 +177,17 @@ public class MessagePages extends ElementHelper {
     }
 
     public void checkPhotoMessageInfo(){
-        //checkVisible(PHOTO_NUMBER_ELEMENT); Comment line can be removed if prod bug is resolved
-        //checkVisible(PHOTO_MESSAGE_ELEMENT);
+        checkVisible(PHOTO_NUMBER_ELEMENT);
+        checkVisible(PHOTO_MESSAGE_ELEMENT);
+    }
+
+    public void clickPhotoMessageAndCheckDetails(){
+        click(PHOTO_MESSAGE_ELEMENT);
+        setWait(2000);
+        checkVisible(PHOTO_MESSAGE_TITLE);
+        checkText(MEDIA_MESSAGE_DETAIL,"1 Photo");
+        checkVisible(MEDIA_IN_DETAIL);
+        click(DETAIL_BACK_BUTTON);
     }
 
     public void sendPremiumPhotoMessage() {
@@ -186,8 +202,55 @@ public class MessagePages extends ElementHelper {
     }
 
     public void checkPremiumPhotoInformation(){
-        //checkVisible(SEND_GIFT_IMAGE);   Comment line can be removed if prod bug is resolved
-        //checkVisible(COIN_IMAGE);
+        checkVisible(SEND_GIFT_IMAGE);
+        checkVisible(COIN_IMAGE);
+    }
+
+    public void sendVideoToUserInChat(){
+        click(SEND_MEDIA_BUTTON);
+        click(CAMERA_BUTTON);
+        click(VIDEO_BUTTON);
+        click(TAKE_A_PHOTO_BUTTON);
+        setWait(4000);
+        click(TAKE_A_PHOTO_BUTTON);
+        click(CONFIRM_PHOTO_BUTTON);
+        click(SEND_TO_PERSON_BUTTON);
+        setWait(1000);
+        click(SEND_MEDIA_TO_USER);
+    }
+
+    public void checkVideoInfo(){
+        setWait(2000);
+        checkText(TEXT_VIDEO_NUMBER,"1 Video");
+        checkVisible(VIDEO_MESSAGE_ICON);
+    }
+
+    public void clickVideoAndCheckDetails(){
+        click(VIDEO_MESSAGE_ICON);
+        setWait(2000);
+        checkText(MEDIA_MESSAGE_DETAIL,"1 Video");
+        checkVisible(MEDIA_IN_DETAIL);
+        click(DETAIL_BACK_BUTTON);
+    }
+
+    public void sendPremiumVideoToUserInChat(){
+        click(SEND_MEDIA_BUTTON);
+        click(CAMERA_BUTTON);
+        click(VIDEO_BUTTON);
+        click(TAKE_A_PHOTO_BUTTON);
+        setWait(4000);
+        click(TAKE_A_PHOTO_BUTTON);
+        click(CONFIRM_PHOTO_BUTTON);
+        click(SEND_TO_PERSON_BUTTON);
+        setWait(1000);
+        click(GIFT_PRICE_ELEMENT);
+        click(SEND_MEDIA_TO_USER);
+    }
+
+    public void checkPremiumVideoInfo(){
+        checkVisible(VIDEO_MESSAGE_ICON);
+        checkVisible(SEND_GIFT_IMAGE);
+        checkVisible(COIN_IMAGE);
     }
 
     public void sendGiftMessage(){
@@ -238,7 +301,7 @@ public class MessagePages extends ElementHelper {
     }
 
     public void closeHybridPurchasePage(){
-        setWait(5000);
+        setWait(9000);
         click(HYBRID_PURCHASE_CLOSE_BUTTON);
         click(CONFIRM_POPUP_BUTTON);
         click(TOUCH_OUTSIDE_AREA);

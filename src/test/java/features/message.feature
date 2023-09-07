@@ -26,6 +26,8 @@
       When click user option button
       Then check the buttons text
       Then click view profile button and back to chat page
+      Then click user option button
+      And click mute and unmute buttons
 
     Scenario: Send text message to user and check
       When send text message to user
@@ -34,10 +36,20 @@
     Scenario: Send photo to user and check
       Then send photo message to user
       And check photo message info
+      And check photo details
 
     Scenario: Send premium photo to user and check
       Then send premium photo to user
       And check premium photo info
+
+    Scenario: send video to user and check
+      When send video to user
+      Then check video info in chat
+      And check video details
+
+    Scenario: send premium video to user and check
+      When send premium video to user
+      Then check premium video info in chat
 
     Scenario: Send gift to user and check
       Then send gift to user
