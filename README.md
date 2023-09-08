@@ -1,29 +1,24 @@
-# README #
+# SPL_TEST_AUTOMATION #
 
-This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
+### Login Scenarios ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* SuperLive Mobile Application Email Login Process
+* SuperLive Mobile Application Google Login Process
+* SuperLive Mobile Application Phone Login Process
+* Verification of Texts for Login Options in SuperLive Mobile Application
+* Checking for Notification of Email Not Being Sent on the Forgot Password Screen in the SuperLive Mobile Application
+* Checking for an Invalid Email Notification During the Email Login Process on the Forgot Password Screen in the SuperLive Mobile Application
+* Email Login with Non-Registered Email in SuperLive Mobile Application
+* Email Login with Invalid Email in SuperLive Mobile Application
+* Email Login with Incorrect Password in SuperLive Mobile Application
+* Verifying Incorrect SMS Code Entry for Phone Login in SuperLive Mobile Application
 
-### How do I get set up? ###
+### Signup Scenarios ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* SuperLive Mobile Application Email Signup Process
+* SuperLive Mobile Application Google Signup Process
+* SuperLive Mobile Application Phone Signup Process
+* SuperLive Mobile Application Email Signup Process - Password Mismatch Case
+* SuperLive Mobile Application Email Signup Process - Previously Registered Email
+* Accessing Privacy Policy Screen During Signup Process in SuperLive Mobile Application
