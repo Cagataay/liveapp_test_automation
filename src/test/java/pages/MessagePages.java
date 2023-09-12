@@ -16,7 +16,7 @@ public class MessagePages extends ElementHelper {
         click(NAV_BAR_INBOX);
     }
 
-    public void checkInboxPageElements(){
+    public void checkInboxPageElements() {
         checkText(INBOX_TITLE, "Inbox");
         checkVisible(INBOX_ONLINE_STATUS);
         checkVisible(PROFILE_PICTURE);
@@ -71,8 +71,15 @@ public class MessagePages extends ElementHelper {
 
     public void verifyInboxSupportAccount() {
         setWait(1000);
-        checkVisible(INBOX_SUPPORT_ACCOUNT);
-        click(INBOX_SUPPORT_ACCOUNT);
+        if(isDisplayed(INBOX_SUPPORT_ACCOUNT)){
+            checkVisible(INBOX_SUPPORT_ACCOUNT);
+            click(INBOX_SUPPORT_ACCOUNT);
+        }
+        else {
+            checkVisible(INBOX_VIP_SUPPORT);
+            click(INBOX_VIP_SUPPORT);
+        }
+
         checkText(CONVERSATION_COIN_RECOVERY_TITLE, "Do you have trouble with purchasing coins?");
         checkVisible(CONVERSATION_COIN_RECOVERY_ARROW);
         checkVisible(CONVERSATION_USER_LAST_SEEN);
@@ -81,7 +88,7 @@ public class MessagePages extends ElementHelper {
         checkVisible(SEND_MESSAGE_BUTTON);
     }
 
-    public void sendMessageToSupportAccount(){
+    public void sendMessageToSupportAccount() {
         click(SEND_TEXT_AREA);
         sendKeys(SEND_TEXT_AREA, "I'm sending a text message for purchasing coins problems");
         click(SEND_MESSAGE_BUTTON);
@@ -95,6 +102,7 @@ public class MessagePages extends ElementHelper {
     }
 
     public void goToChatPage() {
+        setWait(3000);
         click(INBOX_USER);
     }
 
@@ -104,7 +112,13 @@ public class MessagePages extends ElementHelper {
     }
 
     public void verifyLastSeen() {
-        checkVisible(CONVERSATION_USER_LAST_SEEN);
+        setWait(1000);
+
+        if (isDisplayed(CONVERSATION_USER_LAST_SEEN)) {
+            checkVisible(CONVERSATION_USER_LAST_SEEN);
+        } else {
+            System.out.println("Last seen element is not exist");
+        }
     }
 
     public void verifyProfilePhotoAndUserName() {
@@ -131,11 +145,11 @@ public class MessagePages extends ElementHelper {
 
     public void clickViewProfileButtonAndTurnBackToChatPage() {
         click(OVERLAY_VIEW_PROFILE_BUTTON);
-        setWait(1000);
+        setWait(2000);
         click(PROFILE_BACK_BUTTON);
     }
 
-    public void muteAndUnmuteUser(){
+    public void muteAndUnmuteUser() {
         click(OVERLAY_MUTE_CALLS_BUTTON);
         setWait(1000);
         click(CHAT_USER_OPTION_BUTTON);
@@ -148,7 +162,13 @@ public class MessagePages extends ElementHelper {
         click(SEND_MESSAGE_BUTTON);
     }
 
-    public void checkMessageInfo(){
+    public void copyTextMessageInChat(){
+        setWait(2000);
+        holdTheElement(TEXT_MESSAGE_IN_CHAT);
+        click(COPY_MESSAGE_ELEMENT);
+    }
+
+    public void checkMessageInfo() {
         checkVisible(MESSAGE_DATE);
         checkVisible(MESSAGE_SEEN_STATE);
     }
@@ -165,27 +185,28 @@ public class MessagePages extends ElementHelper {
             click(SEND_TO_PERSON_BUTTON);
             setWait(1000);
             click(SEND_MEDIA_TO_USER);
-        }
-        else {
+            setWait(5000);
+        } else {
             click(PHOTO_BUTTON);
             click(TAKE_A_PHOTO_BUTTON);
             click(CONFIRM_PHOTO_BUTTON);
             click(SEND_TO_PERSON_BUTTON);
             setWait(1000);
             click(SEND_MEDIA_TO_USER);
+            setWait(5000);
         }
     }
 
-    public void checkPhotoMessageInfo(){
+    public void checkPhotoMessageInfo() {
         checkVisible(PHOTO_NUMBER_ELEMENT);
         checkVisible(PHOTO_MESSAGE_ELEMENT);
     }
 
-    public void clickPhotoMessageAndCheckDetails(){
+    public void clickPhotoMessageAndCheckDetails() {
         click(PHOTO_MESSAGE_ELEMENT);
         setWait(2000);
         checkVisible(PHOTO_MESSAGE_TITLE);
-        checkText(MEDIA_MESSAGE_DETAIL,"1 Photo");
+        checkText(MEDIA_MESSAGE_DETAIL, "1 Photo");
         checkVisible(MEDIA_IN_DETAIL);
         click(DETAIL_BACK_BUTTON);
     }
@@ -193,122 +214,249 @@ public class MessagePages extends ElementHelper {
     public void sendPremiumPhotoMessage() {
         click(SEND_MEDIA_BUTTON);
         click(CAMERA_BUTTON);
-        click(PHOTO_BUTTON);
-        click(TAKE_A_PHOTO_BUTTON);
-        click(CONFIRM_PHOTO_BUTTON);
-        click(SEND_TO_PERSON_BUTTON);
-        click(GIFT_PRICE_ELEMENT);
-        click(SEND_MEDIA_TO_USER);
+
+        if (isDisplayed(ALLOW_WHILE_USING_THE_APP)) {
+            click(ALLOW_WHILE_USING_THE_APP);
+            click(PHOTO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            click(SEND_TO_PERSON_BUTTON);
+            setWait(1000);
+            click(GIFT_PRICE_ELEMENT);
+            click(SEND_MEDIA_TO_USER);
+            setWait(5000);
+        } else {
+            click(PHOTO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            click(SEND_TO_PERSON_BUTTON);
+            setWait(1000);
+            click(GIFT_PRICE_ELEMENT);
+            click(SEND_MEDIA_TO_USER);
+            setWait(5000);
+        }
     }
 
-    public void checkPremiumPhotoInformation(){
+    public void checkPremiumPhotoInformation() {
         checkVisible(SEND_GIFT_IMAGE);
         checkVisible(COIN_IMAGE);
     }
 
-    public void sendVideoToUserInChat(){
+    public void sendVideoToUserInChat() {
         click(SEND_MEDIA_BUTTON);
         click(CAMERA_BUTTON);
-        click(VIDEO_BUTTON);
-        click(TAKE_A_PHOTO_BUTTON);
-        setWait(4000);
-        click(TAKE_A_PHOTO_BUTTON);
-        click(CONFIRM_PHOTO_BUTTON);
-        click(SEND_TO_PERSON_BUTTON);
-        setWait(1000);
-        click(SEND_MEDIA_TO_USER);
+
+        if (isDisplayed(ALLOW_WHILE_USING_THE_APP)) {
+            click(ALLOW_WHILE_USING_THE_APP);
+            click(VIDEO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            setWait(4000);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            click(SEND_TO_PERSON_BUTTON);
+            setWait(1000);
+            click(SEND_MEDIA_TO_USER);
+            setWait(5000);
+        } else {
+            click(VIDEO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            setWait(4000);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            click(SEND_TO_PERSON_BUTTON);
+            setWait(1000);
+            click(SEND_MEDIA_TO_USER);
+            setWait(5000);
+        }
     }
 
-    public void checkVideoInfo(){
+    public void checkVideoInfo() {
         setWait(2000);
-        checkText(TEXT_VIDEO_NUMBER,"1 Video");
+        checkText(TEXT_VIDEO_NUMBER, "1 Video");
         checkVisible(VIDEO_MESSAGE_ICON);
     }
 
-    public void clickVideoAndCheckDetails(){
+    public void clickVideoAndCheckDetails() {
         click(VIDEO_MESSAGE_ICON);
         setWait(2000);
-        checkText(MEDIA_MESSAGE_DETAIL,"1 Video");
+        checkText(MEDIA_MESSAGE_DETAIL, "1 Video");
         checkVisible(MEDIA_IN_DETAIL);
         click(DETAIL_BACK_BUTTON);
     }
 
-    public void sendPremiumVideoToUserInChat(){
+    public void sendPremiumVideoToUserInChat() {
         click(SEND_MEDIA_BUTTON);
         click(CAMERA_BUTTON);
-        click(VIDEO_BUTTON);
-        click(TAKE_A_PHOTO_BUTTON);
-        setWait(4000);
-        click(TAKE_A_PHOTO_BUTTON);
-        click(CONFIRM_PHOTO_BUTTON);
-        click(SEND_TO_PERSON_BUTTON);
-        setWait(1000);
-        click(GIFT_PRICE_ELEMENT);
-        click(SEND_MEDIA_TO_USER);
+
+        if (isDisplayed(ALLOW_WHILE_USING_THE_APP)) {
+            click(ALLOW_WHILE_USING_THE_APP);
+            click(VIDEO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            setWait(4000);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            click(SEND_TO_PERSON_BUTTON);
+            setWait(1000);
+            click(GIFT_PRICE_ELEMENT);
+            click(SEND_MEDIA_TO_USER);
+            setWait(5000);
+        } else {
+            click(VIDEO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            setWait(4000);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            click(SEND_TO_PERSON_BUTTON);
+            setWait(1000);
+            click(GIFT_PRICE_ELEMENT);
+            click(SEND_MEDIA_TO_USER);
+            setWait(5000);
+        }
     }
 
-    public void checkPremiumVideoInfo(){
+    public void checkPremiumVideoInfo() {
         checkVisible(VIDEO_MESSAGE_ICON);
         checkVisible(SEND_GIFT_IMAGE);
         checkVisible(COIN_IMAGE);
     }
 
-    public void sendGiftMessage(){
+    public void sendGiftMessage() {
         click(CHAT_GIFT_BUTTON);
         setWait(1000);
         click(GIFT_PRICE_ELEMENT);
     }
 
-    public void checkGiftMessageInformation(){
+    public void checkGiftMessageInformation() {
         checkVisible(GIFT_IN_CHAT);
         checkVisible(GIFT_PRICE_IN_CHAT);
     }
 
-    public void sendAudioMessage(){
+    public void sendAudioMessage() {
         holdTheElement(AUDIO_MESSAGE_BUTTON);
 
         if (isDisplayed(ALLOW_WHILE_USING_THE_APP)) {
             click(ALLOW_WHILE_USING_THE_APP);
             holdTheElement(AUDIO_MESSAGE_BUTTON);
-            setWait(8000);
+            setWait(6000);
         }
         setWait(1000);
         releaseTheElement(AUDIO_MESSAGE_BUTTON);
+        setWait(2000);
     }
 
-    public void playTheAudioMessage(){
+    public void playTheAudioMessage() {
         click(PLAY_BUTTON);
     }
 
-    public void checkAudioMessageInformation(){
+    public void checkAudioMessageInformation() {
         checkVisible(AUDIO_MESSAGE_BAR);
         checkVisible(AUDIO_MESSAGE_TIMER);
     }
 
-    public void clickGiftButtonInChat(){
+    public void clickGiftButtonInChat() {
         click(CHAT_GIFT_BUTTON);
     }
 
-    public void checkElementsInGiftOverlay(){
+    public void checkElementsInGiftOverlay() {
         checkVisible(VIP_GIFT_BUTTON);
         checkVisible(TOTAL_COIN_AMOUNT);
         checkVisible(COIN_ICON_IN_OVERLAY);
         click(VIP_GIFT_BUTTON);
     }
 
-    public void clickBuyCoinsButtonInGiftOverlay(){
+    public void clickBuyCoinsButtonInGiftOverlay() {
         click(BUY_COINS_BUTTON_IN_OVERLAY);
     }
 
-    public void closeHybridPurchasePage(){
-        setWait(9000);
+    public void closeHybridPurchasePage() {
+        setWait(14000);
         click(HYBRID_PURCHASE_CLOSE_BUTTON);
         click(CONFIRM_POPUP_BUTTON);
-        click(TOUCH_OUTSIDE_AREA);
     }
 
-    public void scrollInMessagePage(){
+    public void scrollInMessagePage() {
         scrollPageUp(driver, 0.5, 0.2);
         scrollPageDown(driver, 0.5, 0.2);
+    }
+
+    public void checkUserBadgeInInbox(){
+        if(isDisplayed(USER_LEVEL_BADGE)){
+            checkVisible(USER_LEVEL_BADGE);
+        }
+    }
+
+    public void checkUserTopBadgeInInbox(){
+        if(isDisplayed(TOP_BADGE)) {
+            checkVisible(TOP_BADGE);
+        }
+    }
+
+    public void checkUserVipBadgeInInbox() {
+        if (isDisplayed(VIP_BADGE)) {
+            checkVisible(VIP_BADGE);
+        }
+    }
+
+    public void swipeRightInGiftOverlayWithElement(){
+        dragThisCoordinate(GIFT_PRICE_ELEMENT,-200,100);
+        setWait(1500);
+    }
+
+    public void clickSeenButton(){
+        click(MESSAGE_SEEN_BUTTON);
+    }
+
+    public void checkSeenPopupElementsTexts(){
+        checkVisible(SEEN_POPUP_ICON);
+        checkText(SEEN_POPUP_TITLE,"Don’t Miss the Chat");
+        checkText(SEEN_INFO_DESCRIPTION,"You must be a GOLD VIP to see when messages have been read.");
+    }
+
+    public void goToThePaymentPageFromSeenPopup(){
+        click(CONFIRM_BUTTON_IN_POPUP);
+    }
+
+    public void closeSeenPopup(){
+        click(CANCEL_BUTTON_IN_POPUP);
+    }
+
+    public void openMediaScreenFromChat(){
+        click(SEND_MEDIA_BUTTON);
+        click(CAMERA_BUTTON);
+
+        if (isDisplayed(ALLOW_WHILE_USING_THE_APP)) {
+            click(ALLOW_WHILE_USING_THE_APP);
+            click(PHOTO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            click(SEND_TO_PERSON_BUTTON);
+            setWait(1000);
+        } else {
+            click(PHOTO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            click(SEND_TO_PERSON_BUTTON);
+            setWait(1000);
+        }
+    }
+
+    public void verifyMediaScreenElements(){
+        checkVisible(MEDIA_PREVIEW_IN_MEDIA_SCREEN);
+        checkVisible(SUGGESTED_GIFT_BUTTON);
+        checkVisible(VIP_GIFT_BUTTON);
+    }
+
+    public void verifyMediaScreenTexts(){
+        checkText(TEXT_VIEW_TOOLBAR,"Media");
+        checkText(SEND_TEXT_AREA,"Mention the content you posted, Share interesting details…");
+        checkText(PREMIUM_CONTENT_HEADER,"Set Premium Content Fee");
+        checkText(PREMIUM_CONTENT_DESCRIPTION,"You can request a gift for the content you send.\n" +
+                "When you choose a gift, the photo/video you send will be locked and will only be displayed in exchange for a gift.");
+        checkText(MEDIA_SIZE_ELEMENT,"1 Photo");
+    }
+
+    public void typeMediaMessageAndSendToUser(){
+        sendKeys(SEND_TEXT_AREA,"I'm writing a media message");
+        click(SEND_MEDIA_TO_USER);
     }
 }

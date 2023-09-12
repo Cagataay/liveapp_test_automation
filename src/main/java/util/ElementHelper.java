@@ -172,37 +172,43 @@ public class ElementHelper extends ElementLocator {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void holdTheElement(By by){
+    public void holdTheElement(By by){ //bir elemente basılı tutmak için
         Actions action = new Actions(driver);
         WebElement element = driver.findElement(by);
         waitUntilElementIsVisible(element,20);
         action.clickAndHold(element).perform();
     }
 
-    public void releaseTheElement(By by){
+    public void releaseTheElement(By by){ //basılı tutulan elementi bırakmak için
         Actions action = new Actions(driver);
         WebElement element = driver.findElement(by);
         waitUntilElementIsVisible(element,20);
         action.release(element).perform();
     }
 
-    public void holdAndRelease(By by){
+    public void holdAndRelease(By by, int time){ //6 saniye basılı tutup çekmek için
         Actions action = new Actions(driver);
         WebElement element = driver.findElement(by);
         waitUntilElementIsVisible(element,20);
         action.clickAndHold(element).perform();
-        setWait(6000);
+        setWait(time);
         action.release(element).perform();
     }
 
     public boolean isDisplayed(By by){
         try{
             WebElement element = driver.findElement(by);
-            waitUntilElementIsVisible(element,7);
+            waitUntilElementIsVisible(element,10);
             return element.isDisplayed();
         }
         catch (Exception e){
             return false;
         }
+    }
+
+    public void dragThisCoordinate(By by, int x, int y){ //you can use this method for swipe right or left
+        Actions action = new Actions(driver);
+        WebElement element = driver.findElement(by);
+        action.dragAndDropBy(element,x,y).perform();
     }
 }

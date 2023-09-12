@@ -11,14 +11,12 @@ public class MessageStepDefinitions {
     MessagePages messagePages = new MessagePages(DriverFactory.getDriver());
 
     @When("go to inbox page")
-    public void go_to_inbox_page() {
+    public void goToTheInboxPage() {
         messagePages.goToInboxPage();
     }
 
     @Then("check inbox elements")
-    public void checkInboxElements() {
-        messagePages.checkInboxPageElements();
-    }
+    public void checkInboxElements() {messagePages.checkInboxPageElements();}
 
     @Then("pin and unpin inbox message")
     public void pinAndUnpinInboxMessage() {
@@ -46,9 +44,7 @@ public class MessageStepDefinitions {
     }
 
     @And("send message to support account")
-    public void sendMessageToSupportAccount() {
-        messagePages.sendMessageToSupportAccount();
-    }
+    public void sendMessageToSupportAccount() {messagePages.sendMessageToSupportAccount();}
 
     @Then("scroll inbox page")
     public void scroll_inbox_page() {
@@ -56,9 +52,7 @@ public class MessageStepDefinitions {
     }
 
     @When("go to chat page from inbox")
-    public void goToChatPageFromInbox() {
-        messagePages.goToChatPage();
-    }
+    public void goToChatPageFromInbox() {messagePages.goToChatPage();}
 
     @Then("check private call buttons")
     public void checkPrivateCallButtons() {
@@ -66,9 +60,7 @@ public class MessageStepDefinitions {
     }
 
     @Then("check last seen")
-    public void checkLastSeen() {
-        messagePages.verifyLastSeen();
-    }
+    public void checkLastSeen() {messagePages.verifyLastSeen();}
 
     @Then("check profile photo and user name")
     public void checkProfilePhotoAndUserName() {
@@ -86,29 +78,24 @@ public class MessageStepDefinitions {
     }
 
     @Then("check the buttons text")
-    public void checkTheButtonsText() {
-        messagePages.checkUserOptionOverlay();
-    }
+    public void checkTheButtonsText() {messagePages.checkUserOptionOverlay();}
 
     @Then("click view profile button and back to chat page")
-    public void clickViewProfileButtonAndBackToChatPage() {
-        messagePages.clickViewProfileButtonAndTurnBackToChatPage();
+    public void clickViewProfileButtonAndBackToChatPage() {messagePages.clickViewProfileButtonAndTurnBackToChatPage();
     }
 
     @And("click mute and unmute buttons")
-    public void clickMuteAndUnmuteButtons() {
-        messagePages.muteAndUnmuteUser();
+    public void clickMuteAndUnmuteButtons() {messagePages.muteAndUnmuteUser();
     }
 
     @When("send text message to user")
-    public void sendTextMessageToUser() {
-        messagePages.sendTextMessage();
-    }
+    public void sendTextMessageToUser() {messagePages.sendTextMessage();}
+
+    @Then("copy text message")
+    public void copyTextMessage() {messagePages.copyTextMessageInChat();}
 
     @And("check message date and seen info")
-    public void checkMessageDateAndSeenInfo() {
-        messagePages.checkMessageInfo();
-    }
+    public void checkMessageDateAndSeenInfo() {messagePages.checkMessageInfo();}
 
     @Then("send photo message to user")
     public void sendPhotoMessageToUser() {
@@ -117,7 +104,7 @@ public class MessageStepDefinitions {
 
     @And("check photo message info")
     public void checkPhotoMessageInfo() {
-        //messagePages.checkPhotoMessageInfo(); //Comment line can be removed if prod bug is resolved
+        //messagePages.checkPhotoMessageInfo(); //Comment line can be removed if prod bug is resolvedd
     }
 
     @And("check photo details")
@@ -209,4 +196,42 @@ public class MessageStepDefinitions {
     public void scrollMessagePage() {
         messagePages.scrollInMessagePage();
     }
+
+    @Then("check user level badge")
+    public void checkUserLevelBadge() {
+        messagePages.checkUserBadgeInInbox();
+    }
+
+    @Then("check user top badge")
+    public void checkUserTopBadge() {messagePages.checkUserTopBadgeInInbox();}
+
+    @Then("check user vip badge")
+    public void checkUserVipBadge() {messagePages.checkUserVipBadgeInInbox();}
+
+    @Then("swipe right in gift overlay")
+    public void swipeRightInGiftOverlay() {messagePages.swipeRightInGiftOverlayWithElement();}
+
+    @When("click seen button in chat")
+    public void clickSeenButtonInChat() {messagePages.clickSeenButton();}
+
+    @Then("check seen popup elements and texts")
+    public void checkSeenPopupElementsAndTexts() {messagePages.checkSeenPopupElementsTexts();}
+
+    @And("click be a VIP button")
+    public void clickBeAVIPButton() {messagePages.goToThePaymentPageFromSeenPopup();}
+
+    @Then("click cancel button in popup")
+    public void clickCancelButtonInPopup() {messagePages.closeSeenPopup();}
+
+    @When("go to media screen from chat")
+    public void goToMediaScreenFromChat() {messagePages.openMediaScreenFromChat();}
+
+    @Then("check media screen elements")
+    public void checkMediaScreenElements() {messagePages.verifyMediaScreenElements();}
+
+    @Then("check media screen texts")
+    public void checkMediaScreenTexts() {messagePages.verifyMediaScreenTexts();}
+
+    @And("type media message and send")
+    public void typeMediaMessageAndSend() {messagePages.typeMediaMessageAndSendToUser();}
 }

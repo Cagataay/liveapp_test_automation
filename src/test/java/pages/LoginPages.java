@@ -70,7 +70,9 @@ public class LoginPages extends ElementHelper {
     }
 
     public void allowNotificationPermission() {
-        click(ElementLocator.PERMISSION_ALLOW_BUTTON);
+        if(isDisplayed(ElementLocator.PERMISSION_ALLOW_BUTTON)){
+            click(ElementLocator.PERMISSION_ALLOW_BUTTON);
+        }
     }
 
     public void clickOnGoogleLoginButton() {

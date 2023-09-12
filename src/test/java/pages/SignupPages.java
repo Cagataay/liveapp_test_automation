@@ -91,7 +91,7 @@ public class SignupPages extends ElementHelper {
         checkText(ElementLocator.SIGN_UP_BIRTHDAY_TITLE,addProfilePhotoTitleText);
         checkText(ElementLocator.SIGN_UP_BIRTHDAY_DESC,addProfilePhotoDescText);
         click(ElementLocator.SIGN_UP_INFO_PROFILE_PICTURE);
-        click(ElementLocator.TAKE_A_PHOTO_BUTTON);
+        click(ElementLocator.SIGN_UP_TAKE_A_PHOTO_BUTTON);
         click(ElementLocator.PERMISSION_ALLOW_FOREGROUND_ONLY_BUTTON);
         click(ElementLocator.CAMERA_SHOOT_BUTTON);
         click(ElementLocator.CAMERA_OK_BUTTON);
