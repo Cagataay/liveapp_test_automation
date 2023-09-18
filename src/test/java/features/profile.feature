@@ -1,7 +1,7 @@
 @profile
   Feature: Superlive App Profile Page
     Scenario: Check Non-Login User Profile Page
-      #When Notification permission is granted
+      When Notification permission is granted
       When Close login overlay
       When Go to profile page
       Then Check non-login image
@@ -49,7 +49,7 @@
 
     @bronzeVip
     Scenario: Check Bronze VIP User Profile Page
-      #When Notification permission is granted
+      When Notification permission is granted
       When the Email login button is clicked
       When the Email login button is clicked
       When Email information is entered
@@ -60,7 +60,7 @@
 
     @silverVip
     Scenario: Check Silver VIP User Profile Page
-      #When Notification permission is granted
+      When Notification permission is granted
       When the Email login button is clicked
       When the Email login button is clicked
       When Email information is entered
@@ -71,7 +71,7 @@
 
     @goldVip
     Scenario: Check Gold VIP User Profile Page
-      #When Notification permission is granted
+      When Notification permission is granted
       When the Email login button is clicked
       When the Email login button is clicked
       When Email information is entered
@@ -84,7 +84,7 @@
 
     @checkTopBadge
     Scenario: Check Top-Badge in SuperLive Mobile App
-      #When Notification permission is granted
+      When Notification permission is granted
       When the Email login button is clicked
       When the Email login button is clicked
       When Email information is entered
@@ -95,7 +95,7 @@
 
     @profileEdit
     Scenario: Check Profile Edit Page
-      #When Notification permission is granted
+      When Notification permission is granted
       When the Email login button is clicked
       When the Email login button is clicked
       When Email information is entered
@@ -112,7 +112,7 @@
 
     @changeUserName
     Scenario: Change Username in SuperLive Mobile App
-      #When Notification permission is granted
+      When Notification permission is granted
       When the Email login button is clicked
       When the Email login button is clicked
       When Email information is entered
@@ -126,7 +126,7 @@
 
     @changeUserBiography
     Scenario: Change Biography in SuperLive Mobile App
-      #When Notification permission is granted
+      When Notification permission is granted
       When the Email login button is clicked
       When the Email login button is clicked
       When Email information is entered
