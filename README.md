@@ -50,3 +50,20 @@
 * Precondition: There must be a user named tester699 in the inbox, you can change user name in the xpath
 * Precondition: There must be a account named superlive official, moderation and support specialist in the inbox
 * Note: For these preconditions you can login with: email: tester052@test.com Password: test1234
+
+### Profile Scenarios ###
+
+* Check Non-Login User Profile Page
+* Check User Profile Page
+* Check User Bronze Vip Badge
+* Check User Silver Vip Badge
+* Check User Gold Vip Badge
+* Check Top-Badge in SuperLive Mobile App
+* Check Profile Edit Page
+* Change Username in SuperLive Mobile App
+* Change Biography in SuperLive Mobile App
+
+
+### Profile Preconditions ###
+
+* Precondition: User must have a biography text

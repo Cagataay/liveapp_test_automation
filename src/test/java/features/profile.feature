@@ -48,7 +48,7 @@
       Then Check profile settings button
 
     @bronzeVip
-    Scenario: Check Bronze VIP User Profile Page
+    Scenario: Check User Bronze Vip Badge
       When Notification permission is granted
       When the Email login button is clicked
       When the Email login button is clicked
@@ -59,7 +59,7 @@
       Then Check bronze vip badge
 
     @silverVip
-    Scenario: Check Silver VIP User Profile Page
+    Scenario: Check User Silver Vip Badge
       When Notification permission is granted
       When the Email login button is clicked
       When the Email login button is clicked
@@ -70,7 +70,7 @@
       Then Check silver vip badge
 
     @goldVip
-    Scenario: Check Gold VIP User Profile Page
+    Scenario: Check User Gold Vip Badge
       When Notification permission is granted
       When the Email login button is clicked
       When the Email login button is clicked
