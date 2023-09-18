@@ -16,6 +16,10 @@ import java.util.List;
 
 import static java.lang.Math.abs;
 
+import static io.appium.java_client.touch.WaitOptions.waitOptions;
+import static io.appium.java_client.touch.offset.PointOption.point;
+import static java.time.Duration.ofMillis;
+
 
 public class ElementHelper extends ElementLocator {
     AppiumDriver driver;
@@ -62,9 +66,9 @@ public class ElementHelper extends ElementLocator {
         int endY = (int) (size.height * startPercentage);
 
         TouchAction touchAction = new TouchAction(driver);
-        touchAction.press(PointOption.point(startX, startY))
+        touchAction.press(point(startX, startY))
                 .waitAction()
-                .moveTo(PointOption.point(startX, endY))
+                .moveTo(point(startX, endY))
                 .release()
                 .perform();
     }
@@ -77,9 +81,9 @@ public class ElementHelper extends ElementLocator {
         int endY = (int) (size.height * endPercentage);
 
         TouchAction touchAction = new TouchAction(driver);
-        touchAction.press(PointOption.point(startX, startY))
+        touchAction.press(point(startX, startY))
                 .waitAction()
-                .moveTo(PointOption.point(startX, endY))
+                .moveTo(point(startX, endY))
                 .release()
                 .perform();
     }
@@ -97,7 +101,7 @@ public class ElementHelper extends ElementLocator {
         int targetX = parentX + parentWidth - 1;
         int targetY = parentY + parentHeight / 2;
 
-        new TouchAction(driver).tap(PointOption.point(targetX, targetY)).perform();
+        new TouchAction(driver).tap(point(targetX, targetY)).perform();
     }
 
     // Ogelerin sayisini almak icin kullanilir
@@ -128,7 +132,7 @@ public class ElementHelper extends ElementLocator {
         int targetY = screenHeight - 1;
 
         TouchAction action = new TouchAction(driver);
-        action.tap(PointOption.point(targetX, targetY)).perform();
+        action.tap(point(targetX, targetY)).perform();
     }
 
     // Elementten text bilgisini alma islemi
@@ -164,7 +168,33 @@ public class ElementHelper extends ElementLocator {
         int centerY = (int) (screenHeight * 0.65); // Ekranın ortasından biraz aşağıda tıklamak için y değerini düşürebilirsiniz.
 
         TouchAction action = new TouchAction(driver);
-        action.tap(PointOption.point(centerX, centerY)).perform();
+        action.tap(point(centerX, centerY)).perform();
+    }
+
+    public void rightSwipe(By key, double startPercentage, double endPercentage, double anchorPercentage){
+        Dimension size = driver.findElement(key).getSize();
+        int anchor = (int) (size.height * anchorPercentage);
+        int startPoint = (int) (size.width * startPercentage);
+        int endPoint = (int) (size.width * endPercentage);
+        new TouchAction(driver)
+                .press(point(startPoint, anchor))
+                .waitAction(waitOptions(ofMillis(500)))
+                .moveTo(point(endPoint, anchor))
+                .release().perform();
+
+    }
+
+    public void leftSwipe(By key, double startPercentage, double endPercentage, double anchorPercentage){
+        Dimension size = driver.findElement(key).getSize();
+        int anchor = (int) (size.height * anchorPercentage);
+        int startPoint = (int) (size.width * startPercentage);
+        int endPoint = (int) (size.width * endPercentage);
+        new TouchAction(driver)
+                .press(point(endPoint, anchor))
+                .waitAction(waitOptions(ofMillis(500)))
+                .moveTo(point(startPoint, anchor))
+                .release().perform();
+
     }
 
     public void waitUntilElementIsVisible(WebElement element , int time){
