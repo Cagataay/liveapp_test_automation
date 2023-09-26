@@ -263,9 +263,16 @@ public class ElementLocator {
     public static final By EDIT_PROFILE_BIO= MobileBy.id("com.superlive.liveapp:id/editProfileBio");
     public static final By PROFILE_EDIT_SHARED_ID= MobileBy.id("com.superlive.liveapp:id/editProfileId");
     public static final By TEXT_VIEW_SAVE= MobileBy.id("com.superlive.liveapp:id/textViewSave");
-
-
-
-
+    public static final By SEARCH_BAR_BUTTON=MobileBy.id("com.superlive.liveapp:id/imgSearch");
+    public static final By SEARCH_BAR_LABEL=MobileBy.id("com.superlive.liveapp:id/searchEditText");
+    public static final By SEARCH_RESULT=MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout");
+    public static final By SEARCH_BAR_FOLLOW=MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/androidx.appcompat.widget.LinearLayoutCompat/android.widget.ImageButton");
+    public static final By SEARCH_BAR_CLOSE=MobileBy.id("com.superlive.liveapp:id/closeSearchImageButton");
+    public static final By LOGIN_POPUP_CLOSE=MobileBy.id("com.superlive.liveapp:id/md_button_negative");
+    public static final By SEARCH_BAR_UNFOLLOW=MobileBy.id("com.superlive.liveapp:id/imgFollowed");
+    public static final By UNFOLLOW_POPUP=MobileBy.id("com.superlive.liveapp:id/customDialogPositive");
+    public static final By SEARCH_BAR_USER_LAYOUT=MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]");
+    public static final By EMPTY_SEARCH_VIEW=MobileBy.id("com.superlive.liveapp:id/emptySearchView");
+    public static final By EMPTY_DISCOVER_PAGE=MobileBy.id("com.superlive.liveapp:id/discoverEmptyView");
 
 }

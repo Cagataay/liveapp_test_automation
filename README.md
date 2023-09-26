@@ -67,3 +67,12 @@
 ### Profile Preconditions ###
 
 * Precondition: User must have a biography text
+
+
+### Search Bar Scenarios ###
+
+* SuperLive Mobile Application Search Bar Process With Login Search by Name
+* SuperLive Mobile Application Search Bar Process With Login Search by ID
+* SuperLive Mobile Application Search Bar Process Follow and Unfollow
+* SuperLive Mobile Application Search Bar Process With NonLogin Search
+* SuperLive Mobile Application Search Bar Process Global User Search Turkish User
