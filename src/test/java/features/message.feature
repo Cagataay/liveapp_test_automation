@@ -221,6 +221,145 @@
       Then check media screen texts
       And type media message and send
 
+    @familyChat
+    Scenario: Go to the family chat and check elements
+      When login to app as family member
+      When go to inbox page
+      Then go to the family chat from inbox
+      Then check family chat elements
+
+    @familyChat
+    Scenario:  Send text message to family chat
+      When login to app as family member
+      When go to inbox page
+      Then go to the family chat from inbox
+      When send text message to user
+
+    @familyChat
+    Scenario:  Send photo message to family chat
+      When login to app as family member
+      When go to inbox page
+      Then go to the family chat from inbox
+      When send photo message to family
+
+    @familyChat
+    Scenario:  Send video message to family chat
+      When login to app as family member
+      When go to inbox page
+      Then go to the family chat from inbox
+      When send video message to family
+
+    @familyChat
+    Scenario:  Send audio message to family chat
+      When login to app as family member
+      When go to inbox page
+      Then go to the family chat from inbox
+      When send audio message to user
+      And play audio message
+      And check audio message info
+      And scroll message page
+
+    @familyChat
+    Scenario: go to the family page from family chat
+      When login to app as family member
+      When go to inbox page
+      Then go to the family chat from inbox
+      Then go to the family page from family chat
+
+    @familyChat
+    Scenario: check family option overlay as a family leader
+      When login to app as family leader
+      When go to inbox page
+      Then go to the family chat from inbox
+      When click family option button
+      Then check family option popup as family leader
+
+    @familyChat
+    Scenario: mute and unmute the family chat
+      When login to app as family leader
+      When go to inbox page
+      Then go to the family chat from inbox
+      When click family option button
+      When click mute notifications button
+      Then go to inbox and check mute icon
+      Then go to the family chat from inbox
+      When click family option button
+      Then click unmute notifications button
+
+    @familyChat
+    Scenario: mute and unmute the members in family chat
+      When login to app as family leader
+      When go to inbox page
+      Then go to the family chat from inbox
+      When click family option button
+      When click mute the members button
+      Then check mute the members popup
+      And click mute the members button in popup
+      When click family option button
+      Then click unmute the members
+
+    @familyChat
+    Scenario:  check family option overlay as a family member
+      When login to app as family member
+      When go to inbox page
+      Then go to the family chat from inbox
+      When click family option button
+      Then check family option popup as family member
+
+    @familyChat
+    Scenario: delete the family chat
+      When login to app as family member
+      When go to inbox page
+      Then go to the family chat from inbox
+      When click family option button
+      Then click delete family chat button
+      And check delete family chat popup
+      And click delete button in popup
+
+    @familyChat
+    Scenario: check leave family popup in family chat
+      When login to app as family member
+      When go to inbox page
+      Then go to the family chat from inbox
+      When click family option button
+      Then click leave family button
+      Then check leave family popup and click cancel button
+
+    @familyChat
+    Scenario: check welcome to family message
+      When login to app as family member
+      When go to inbox page
+      Then go to the family chat from inbox
+      Then check welcome to family message
+      Then copy text message
+
+    @familyChat
+    Scenario: leave family from family chat
+      When login to app as family member
+      When go to inbox page
+      Then go to the family chat from inbox
+      When click family option button
+      Then click leave family button
+      And click leave family button in popup
+
+    @familyChat
+    Scenario: send request to join the family
+      When login to app as family member
+      And click search user button
+      And search family leader and click
+      And click family button in profile
+      And click join request button
+
+    @familyChat
+    Scenario: accept request to join the family
+      When login to app as family leader
+      Then click notification button
+      And click approve button in notifications
+      And turn back to main page
+      When go to inbox page
+      Then go to the family chat from inbox
+      And check family notification in family chat
+
 
 
 

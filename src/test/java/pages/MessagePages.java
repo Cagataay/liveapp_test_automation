@@ -459,4 +459,201 @@ public class MessagePages extends ElementHelper {
         sendKeys(SEND_TEXT_AREA,"I'm writing a media message");
         click(SEND_MEDIA_TO_USER);
     }
+
+    public void loginToAppAsFamilyMember(){
+        loginToAppWithThisAccount("tester051@test.com","test1234");
+    }
+
+    public void goToTheFamilyChat(){
+        setWait(2000);
+        click(FAMILY_CHAT_PHOTO);
+    }
+
+    public void verifyFamilyChatElements(){
+        checkVisible(FAMILY_CHAT_PHOTO);
+        checkVisible(PROFILE_FAMILY_NAME);
+        checkVisible(FAMILY_CHAT_MEMBER_COUNT);
+        checkVisible(FAMILY_MORE_BUTTON);
+        checkVisible(BTN_SIGN_UP_BACK);
+        checkVisible(FAMILY_CHAT_USER_PROFILE_PICTURE);
+        checkVisible(MESSAGE_DATE);
+    }
+
+    public void sendPhotoMessageToFamilyChat() {
+        click(SEND_MEDIA_BUTTON);
+        click(CAMERA_BUTTON);
+        if (isDisplayed(ALLOW_WHILE_USING_THE_APP)) {
+            click(ALLOW_WHILE_USING_THE_APP);
+            click(PHOTO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            setWait(1000);
+            click(SEND_MEDIA_TO_USER);
+            setWait(5000);
+        } else {
+            click(PHOTO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            setWait(1000);
+            click(SEND_MEDIA_TO_USER);
+            setWait(5000);
+        }
+    }
+
+    public void sendVideoToFamilyChat() {
+        click(SEND_MEDIA_BUTTON);
+        click(CAMERA_BUTTON);
+        if (isDisplayed(ALLOW_WHILE_USING_THE_APP)) {
+            click(ALLOW_WHILE_USING_THE_APP);
+            click(VIDEO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            setWait(4000);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            setWait(1000);
+            click(SEND_MEDIA_TO_USER);
+            setWait(5000);
+        } else {
+            click(VIDEO_BUTTON);
+            click(TAKE_A_PHOTO_BUTTON);
+            setWait(4000);
+            click(TAKE_A_PHOTO_BUTTON);
+            click(CONFIRM_PHOTO_BUTTON);
+            setWait(1000);
+            click(SEND_MEDIA_TO_USER);
+            setWait(5000);
+        }
+    }
+
+    public void goToTheFamilyPageAndTurnBack(){
+        click(FAMILY_CHAT_PHOTO);
+        click(BTN_SIGN_UP_BACK);
+    }
+
+    public void clickFamilyOptionButton(){
+        click(FAMILY_MORE_BUTTON);
+    }
+
+    public void loginToAppAsFamilyLeader(){
+        loginToAppWithThisAccount("tester052@test.com","test1234");
+    }
+
+    public void checkFamilyOptionOverlayAsFamilyLeader(){
+        checkText(FAMILY_OPTION_POPUP_TITLE,"Please select");
+        checkText(MUTE_NOTIF_BUTTON,"Mute Notifications");
+        checkText(DELETE_FAMILY_CHAT_BUTTON,"Delete chat");
+        checkText(MUTE_MEMBERS_BUTTON,"Mute the members");
+    }
+
+    public void clickMuteNotifButtonInFamilyOptionOverlay(){
+        click(MUTE_NOTIF_BUTTON);
+    }
+
+    public void goToTheInboxPageAndVerifyMuteIcon(){
+        click(BTN_SIGN_UP_BACK);
+        checkVisible(INBOX_FAMILY_MUTE_ICON);
+    }
+
+    public void clickUnmuteNotifButtonInFamilyOptionOverlay(){
+        click(UNMUTE_NOTIF_BUTTON);
+    }
+
+    public void clickMuteTheMembersButtonInOptionOverlay(){
+        click(MUTE_MEMBERS_BUTTON);
+    }
+
+    public void verifyMuteTheMembersPopup(){
+        checkText(ALERT_TITLE,"Are you sure?");
+        checkText(ALERT_MESSAGE,"Only the leader can message the group when this option is active. Members cannot send messages.");
+        checkText(ALERT_CANCEL_BUTTON,"CANCEL");
+        checkText(CONFIRM_POPUP_BUTTON,"MUTE THE MEMBERS");
+    }
+
+    public void clickMuteTheMembersButton(){
+        click(CONFIRM_POPUP_BUTTON);
+        setWait(2000);
+    }
+
+    public void clickUnmuteTheMembersButton(){
+        click(UNMUTE_MEMBERS_BUTTON);
+    }
+
+    public void verifyFamilyOptionOverlayAsFamilyMember(){
+        checkText(FAMILY_OPTION_POPUP_TITLE,"Please select");
+        checkText(MUTE_NOTIF_BUTTON,"Mute Notifications");
+        checkText(DELETE_FAMILY_CHAT_BUTTON,"Delete chat");
+        checkText(LEAVE_FAMILY_BTN_IN_POPUP,"leave family");
+    }
+
+    public void clickDeleteChatButtonInFamilyOptionOverlay(){
+        click(DELETE_FAMILY_CHAT_BUTTON);
+    }
+
+    public void verifyDeleteFamilyChatPopup(){
+        checkText(ALERT_TITLE,"Are you sure?");
+        checkText(ALERT_MESSAGE,"This chat will be permanently deleted.");
+        checkText(ALERT_CANCEL_BUTTON,"CANCEL");
+        checkText(CONFIRM_POPUP_BUTTON,"DELETE");
+    }
+
+    public void clickDeleteFamilyChatButtonInPopup(){
+        click(CONFIRM_POPUP_BUTTON);
+    }
+
+    public void clickLeaveFamilyButtonInFamilyOptionOverlay(){
+        click(LEAVE_FAMILY_BTN_IN_POPUP);
+    }
+
+    public void verifyLeaveFamilyPopup(){
+        checkText(ALERT_TITLE,"Are you sure you want to leave the family?");
+        checkText(ALERT_MESSAGE,"Family and family chat will no longer be accessible.");
+        checkText(ALERT_CANCEL_BUTTON,"CANCEL");
+        checkText(CONFIRM_POPUP_BUTTON,"LEAVE FAMILY");
+        click(ALERT_CANCEL_BUTTON);
+    }
+
+    public void checkWelcomeMessageInFamilyChat(){
+        checkVisible(FAMILY_NAME_IN_CHAT);
+        checkText(TEXT_MESSAGE_IN_CHAT,"Welcome to the family! Here you can talk to other family members.");
+        checkVisible(FAMILY_CHAT_USER_PROFILE_PICTURE);
+        checkVisible(MESSAGE_DATE);
+        checkVisible(CHAT_TIMESTAMP);
+    }
+
+    public void clickLeaveFamilyButtonInPopup(){
+        click(CONFIRM_POPUP_BUTTON);
+    }
+
+    public void clickSearchButton(){
+        click(SEARCH_BAR_BUTTON);
+    }
+
+    public void searchFamilyLeaderAndGoToProfile(){
+        sendKeys(SEARCH_BAR_LABEL,"tester052");
+        click(LISTED_FAMILY_LEADER);
+    }
+
+    public void clickFamilyNameInProfile(){
+        click(PROFILE_FAMILY_NAME);
+    }
+
+    public void sendRequestToJoinFamily(){
+        click(JOIN_FAMILY_REQUEST_BUTTON);
+    }
+
+    public void clickNotificationButtonAsFamilyLeader(){
+        click(NOTIFICATION_BUTTON);
+    }
+
+    public void approveFamilyJoinRequest(){
+        click(NOTIFICATION_APPROVE_BUTTON);
+    }
+
+    public void turnBackToMainPageFromNotifications(){
+        click(BTN_BACK);
+    }
+
+    public void verifyFamilyNotificationInFamilyChat(){
+        checkVisible(FAMILY_NOTIFICATION_IN_CHAT);
+    }
 }

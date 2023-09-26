@@ -274,5 +274,27 @@ public class ElementLocator {
     public static final By SEARCH_BAR_USER_LAYOUT=MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]");
     public static final By EMPTY_SEARCH_VIEW=MobileBy.id("com.superlive.liveapp:id/emptySearchView");
     public static final By EMPTY_DISCOVER_PAGE=MobileBy.id("com.superlive.liveapp:id/discoverEmptyView");
+    public static final By FAMILY_CHAT_PHOTO =MobileBy.id("com.superlive.liveapp:id/familyImageCircle");
+    public static final By FAMILY_CHAT_MEMBER_COUNT=MobileBy.id("com.superlive.liveapp:id/familyNameMemberCount");
+    public static final By FAMILY_MORE_BUTTON=MobileBy.id("com.superlive.liveapp:id/imgMore");
+    public static final By FAMILY_CHAT_USER_PROFILE_PICTURE=MobileBy.id("com.superlive.liveapp:id/profilePic");
+    public static final By FAMILY_OPTION_POPUP_TITLE=MobileBy.id("com.superlive.liveapp:id/md_text_title");
+    public static final By MUTE_NOTIF_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Mute Notifications')]");
+    public static final By UNMUTE_NOTIF_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Unmute Notifications')]");
+    public static final By DELETE_FAMILY_CHAT_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Delete chat')]");
+    public static final By MUTE_MEMBERS_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Mute the members')]");
+    public static final By UNMUTE_MEMBERS_BUTTON=MobileBy.xpath("//android.widget.TextView[contains(@text, 'Unmute Members')]");
+    public static final By INBOX_FAMILY_MUTE_ICON=MobileBy.id("com.superlive.liveapp:id/ic_conversation_muted");
+    public static final By ALERT_TITLE=MobileBy.id("com.superlive.liveapp:id/alertTitle");
+    public static final By ALERT_MESSAGE=MobileBy.id("android:id/message");
+    public static final By ALERT_CANCEL_BUTTON=MobileBy.id("android:id/button2");
+    public static final By LEAVE_FAMILY_BTN_IN_POPUP=MobileBy.xpath("//android.widget.TextView[contains(@text, 'leave family')]");
+    public static final By FAMILY_NAME_IN_CHAT=MobileBy.id("com.superlive.liveapp:id/userName");
+    public static final By LISTED_FAMILY_LEADER = MobileBy.xpath("//android.widget.TextView[contains(@text, 'tester052')]");
+    public static final By JOIN_FAMILY_REQUEST_BUTTON = MobileBy.id("com.superlive.liveapp:id/btnJoinText");
+    public static final By NOTIFICATION_BUTTON = MobileBy.id("com.superlive.liveapp:id/imageButtonNotifications");
+    public static final By NOTIFICATION_APPROVE_BUTTON = MobileBy.id("com.superlive.liveapp:id/approve");
+    public static final By FAMILY_NOTIFICATION_IN_CHAT = MobileBy.id("com.superlive.liveapp:id/tvNotification");
+
 
 }

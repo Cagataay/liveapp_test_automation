@@ -241,4 +241,30 @@ public class ElementHelper extends ElementLocator {
         WebElement element = driver.findElement(by);
         action.dragAndDropBy(element,x,y).perform();
     }
+
+    public void loginToAppWithThisAccount(String email, String password){
+        if(isDisplayed(PERMISSION_ALLOW_BUTTON)){
+            click(PERMISSION_ALLOW_BUTTON);
+            click(BTN_SIGN_IN_WITH_EMAIL);
+            click(BTN_SIGN_IN_WITH_EMAIL);
+            sendKeys(EDIT_TEXT_LOGIN_MAIL,email);
+            sendKeys(EDIT_TEXT_LOGIN_PASSWORD,password);
+            click(BTN_LOGIN);
+        }
+        else{
+            setWait(500);
+            click(BTN_SIGN_IN_WITH_EMAIL);
+            setWait(1000);
+            click(BTN_SIGN_IN_WITH_EMAIL);
+            sendKeys(EDIT_TEXT_LOGIN_MAIL,email);
+            sendKeys(EDIT_TEXT_LOGIN_PASSWORD,password);
+            click(BTN_LOGIN);
+        }
+    }
+
+    public ElementHelper clearElement(By by){
+        WebElement element = driver.findElement(by);
+        element.clear();
+        return this;
+    }
 }

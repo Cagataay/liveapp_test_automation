@@ -11,9 +11,7 @@ public class MessageStepDefinitions {
     MessagePages messagePages = new MessagePages(DriverFactory.getDriver());
 
     @When("go to inbox page")
-    public void goToTheInboxPage() {
-        messagePages.goToInboxPage();
-    }
+    public void goToTheInboxPage() {messagePages.goToInboxPage();}
 
     @Then("check inbox elements")
     public void checkInboxElements() {messagePages.checkInboxPageElements();}
@@ -81,12 +79,10 @@ public class MessageStepDefinitions {
     public void checkTheButtonsText() {messagePages.checkUserOptionOverlay();}
 
     @Then("click view profile button and back to chat page")
-    public void clickViewProfileButtonAndBackToChatPage() {messagePages.clickViewProfileButtonAndTurnBackToChatPage();
-    }
+    public void clickViewProfileButtonAndBackToChatPage() {messagePages.clickViewProfileButtonAndTurnBackToChatPage();}
 
     @And("click mute and unmute buttons")
-    public void clickMuteAndUnmuteButtons() {messagePages.muteAndUnmuteUser();
-    }
+    public void clickMuteAndUnmuteButtons() {messagePages.muteAndUnmuteUser();}
 
     @When("send text message to user")
     public void sendTextMessageToUser() {messagePages.sendTextMessage();}
@@ -158,9 +154,7 @@ public class MessageStepDefinitions {
     }
 
     @Then("send audio message to user")
-    public void sendAudioMessageToUser() {
-        messagePages.sendAudioMessage();
-    }
+    public void sendAudioMessageToUser() {messagePages.sendAudioMessage();}
 
     @And("play audio message")
     public void playAudioMessage() {
@@ -168,9 +162,7 @@ public class MessageStepDefinitions {
     }
 
     @And("check audio message info")
-    public void checkAudioMessageInfo() {
-        messagePages.checkAudioMessageInformation();
-    }
+    public void checkAudioMessageInfo() {messagePages.checkAudioMessageInformation();}
 
     @When("open gift overlay in chat")
     public void openGiftOverlayInChat() {
@@ -193,9 +185,7 @@ public class MessageStepDefinitions {
     }
 
     @And("scroll message page")
-    public void scrollMessagePage() {
-        messagePages.scrollInMessagePage();
-    }
+    public void scrollMessagePage() {messagePages.scrollInMessagePage();}
 
     @Then("check user level badge")
     public void checkUserLevelBadge() {
@@ -234,4 +224,108 @@ public class MessageStepDefinitions {
 
     @And("type media message and send")
     public void typeMediaMessageAndSend() {messagePages.typeMediaMessageAndSendToUser();}
+
+    @When("login to app as family member")
+    public void loginToAppAsFamilyMember() {
+        messagePages.loginToAppAsFamilyMember();
+    }
+
+    @Then("go to the family chat from inbox")
+    public void goToTheFamilyChatFromInbox() {messagePages.goToTheFamilyChat();}
+
+    @Then("check family chat elements")
+    public void checkFamilyChatElements() {
+        messagePages.verifyFamilyChatElements();
+    }
+
+    @When("send photo message to family")
+    public void sendPhotoMessageToFamily() {messagePages.sendPhotoMessageToFamilyChat();}
+
+    @When("send video message to family")
+    public void sendVideoMessageToFamily() {messagePages.sendVideoToFamilyChat();}
+
+    @Then("go to the family page from family chat")
+    public void goToTheFamilyPageFromFamilyChat() {messagePages.goToTheFamilyPageAndTurnBack();}
+
+    @When("click family option button")
+    public void clickFamilyOptionButton() {messagePages.clickFamilyOptionButton();}
+
+    @When("login to app as family leader")
+    public void loginToAppAsFamilyLeader() {messagePages.loginToAppAsFamilyLeader();}
+
+    @Then("check family option popup as family leader")
+    public void checkFamilyOptionPopupAsFamilyLeader() {
+        messagePages.checkFamilyOptionOverlayAsFamilyLeader();
+    }
+
+    @When("click mute notifications button")
+    public void clickMuteNotificationsButton() {messagePages.clickMuteNotifButtonInFamilyOptionOverlay();}
+
+    @Then("go to inbox and check mute icon")
+    public void goToInboxAndCheckMuteIcon() {messagePages.goToTheInboxPageAndVerifyMuteIcon();}
+
+    @Then("click unmute notifications button")
+    public void clickUnmuteNotificationsButton() {messagePages.clickUnmuteNotifButtonInFamilyOptionOverlay();}
+
+    @When("click mute the members button")
+    public void clickMuteTheMembersButton() {messagePages.clickMuteTheMembersButtonInOptionOverlay();}
+
+    @Then("check mute the members popup")
+    public void checkMuteTheMembersPopup() {messagePages.verifyMuteTheMembersPopup();}
+
+    @And("click mute the members button in popup")
+    public void clickMuteTheMembersButtonInPopup() {messagePages.clickMuteTheMembersButton();}
+
+    @Then("click unmute the members")
+    public void clickUnmuteTheMembers() {messagePages.clickUnmuteTheMembersButton();}
+
+    @Then("check family option popup as family member")
+    public void checkFamilyOptionPopupAsFamilyMember() {
+        messagePages.verifyFamilyOptionOverlayAsFamilyMember();
+    }
+
+    @Then("click delete family chat button")
+    public void clickDeleteFamilyChatButton() {messagePages.clickDeleteChatButtonInFamilyOptionOverlay();}
+
+    @And("check delete family chat popup")
+    public void checkDeleteFamilyChatPopup() {messagePages.verifyDeleteFamilyChatPopup();}
+
+    @And("click delete button in popup")
+    public void clickDeleteButtonInPopup() {messagePages.clickDeleteFamilyChatButtonInPopup();}
+
+    @Then("click leave family button")
+    public void clickLeaveFamilyButton() {messagePages.clickLeaveFamilyButtonInFamilyOptionOverlay();}
+
+    @Then("check leave family popup and click cancel button")
+    public void checkLeaveFamilyPopupAndClickCancelButton() {messagePages.verifyLeaveFamilyPopup();}
+
+    @Then("check welcome to family message")
+    public void checkWelcomeToFamilyMessage() { messagePages.checkWelcomeMessageInFamilyChat();}
+
+    @And("click leave family button in popup")
+    public void clickLeaveFamilyButtonInPopup() {messagePages.clickLeaveFamilyButtonInPopup();}
+
+    @And("click search user button")
+    public void clickSearchUserButton() {messagePages.clickSearchButton();}
+
+    @And("search family leader and click")
+    public void searchFamilyLeaderAndClick() {messagePages.searchFamilyLeaderAndGoToProfile();}
+
+    @And("click family button in profile")
+    public void clickFamilyButtonInProfile() {messagePages.clickFamilyNameInProfile();}
+
+    @And("click join request button")
+    public void clickJoinRequestButton() {messagePages.sendRequestToJoinFamily();}
+
+    @Then("click notification button")
+    public void clickNotificationButton() {messagePages.clickNotificationButtonAsFamilyLeader();}
+
+    @And("click approve button in notifications")
+    public void clickApproveButtonInNotifications() {messagePages.approveFamilyJoinRequest();}
+
+    @And("turn back to main page")
+    public void turnBackToMainPage() {messagePages.turnBackToMainPageFromNotifications();}
+
+    @And("check family notification in family chat")
+    public void checkFamilyNotificationInFamilyChat() {messagePages.verifyFamilyNotificationInFamilyChat();}
 }
