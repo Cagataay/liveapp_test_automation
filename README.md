@@ -42,6 +42,22 @@
 * Swipe in the gift overlay
 * Check don't miss the chat popup
 * Check media screen
+* Go to the family chat and check elements
+* Send text message to family chat
+* Send photo message to family chat
+* Send video message to family chat
+* Send audio message to family chat
+* Go to the family page from family chat
+* Check family option overlay as a family leader
+* Mute and unmute the family chat
+* Mute and unmute the members in family chat
+* Check family option overlay as a family member
+* Delete the family chat
+* Check leave family popup in family chat
+* Check welcome to family message
+* Leave family from family chat
+* Send request to join the family
+* Accept request to join the family
 
 ### Message Preconditions ###
 
@@ -50,6 +66,7 @@
 * Precondition: There must be a user named tester699 in the inbox, you can change user name in the xpath
 * Precondition: There must be a account named superlive official, moderation and support specialist in the inbox
 * Note: For these preconditions you can login with: email: tester052@test.com Password: test1234
+* Precondition: It is necessary to have a family to see family chat
 
 ### Profile Scenarios ###
 
