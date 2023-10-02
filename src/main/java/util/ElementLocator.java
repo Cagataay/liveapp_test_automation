@@ -84,9 +84,7 @@ public class ElementLocator {
     public static final By LOGIN_EMAIL_ERROR_TEXT=MobileBy.id("com.superlive.liveapp:id/loginEmailErrorText");
     public static final By LOGIN_PASSWORD_ERROR_TEXT=MobileBy.id("com.superlive.liveapp:id/loginPasswordErrorText");
     public static final By TEXT_VIEW_VERIFY_ERROR=MobileBy.id("com.superlive.liveapp:id/textViewVerifyError");
-
     public static final By NAV_BAR_INBOX=MobileBy.id("com.superlive.liveapp:id/navigation_inbox");
-    public static final By INBOX_TITLE=MobileBy.id("com.superlive.liveapp:id/textViewToolBar");
     public static final By INBOX_ONLINE_STATUS=MobileBy.id("com.superlive.liveapp:id/conversationOnlineStatus");
     public static final By PROFILE_PICTURE =MobileBy.id("com.superlive.liveapp:id/imgProfilePicture");
     public static final By LIVESTREAM_BUTTON=MobileBy.id("com.superlive.liveapp:id/fabButtonStartStream");
@@ -295,6 +293,24 @@ public class ElementLocator {
     public static final By NOTIFICATION_BUTTON = MobileBy.id("com.superlive.liveapp:id/imageButtonNotifications");
     public static final By NOTIFICATION_APPROVE_BUTTON = MobileBy.id("com.superlive.liveapp:id/approve");
     public static final By FAMILY_NOTIFICATION_IN_CHAT = MobileBy.id("com.superlive.liveapp:id/tvNotification");
-
-
+    public static final By NAVIGATION_LEADER_BOARD_BUTTON= MobileBy.id("com.superlive.liveapp:id/navigation_leader_board");
+    public static final By NAVIGATION_PREMIUM_LEADER_BOARD_BUTTON= MobileBy.id("com.superlive.liveapp:id/imageButtonLeaderBoards");
+    public static final By FIRST_PROFILE_NAME_LEADER_BOARD= MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/androidx.appcompat.widget.LinearLayoutCompat/android.view.ViewGroup[2]/androidx.appcompat.widget.LinearLayoutCompat[1]/android.widget.TextView[2]");
+    public static final By STREAMERS_TAB_LEADER_BOARD= MobileBy.xpath("//android.widget.LinearLayout[@content-desc=\"Streamers\"]");
+    public static final By SUPPORTERS_TAB_LEADER_BOARD= MobileBy.xpath("//android.widget.LinearLayout[@content-desc=\"Supporters\"]");
+    public static final By LAST_24_HOURS_TAB_LEADER_BOARD= MobileBy.xpath("//android.widget.LinearLayout[@content-desc=\"Last 24 Hours\"]");
+    public static final By LAST_7_DAYS_TAB_LEADER_BOARD= MobileBy.xpath("//android.widget.LinearLayout[@content-desc=\"Last 7 Days\"]");
+    public static final By ALL_TIME_TAB_LEADER_BOARD= MobileBy.xpath("//android.widget.LinearLayout[@content-desc=\"All Time\"]");
+    public static final By FAMILIES_TAB_LEADER_BOARD= MobileBy.xpath("//android.widget.LinearLayout[@content-desc=\"Families\"]");
+    public static final By FIRST_FAMILY_NAME_LEADER_BOARD= MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView[2]");
+    public static final By FIRST_PROFILE_FOLLOW_BUTTON_LEADER_BOARD= MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/androidx.appcompat.widget.LinearLayoutCompat/android.view.ViewGroup[2]/android.widget.RelativeLayout/android.widget.ImageView");
+    public static final By FOLLOW_BUTTON_TEXT_PROFILE= MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/androidx.appcompat.widget.LinearLayoutCompat[2]/android.widget.TextView");
+    public static final By CUSTOM_DIALOG_POSITIVE= MobileBy.id("com.superlive.liveapp:id/customDialogPositive");
+    public static final By CUSTOM_DIALOG_NEGATIVE= MobileBy.id("com.superlive.liveapp:id/customDialogNegative");
+    public static final By LEADER_BOARD_COUNTRY_SELECTION_BUTTON= MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup");
+    public static final By FIRST_OPTION_COUNTRY_LEADER_BOARD= MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup");
+    public static final By SEARCH_TEXT_BOX_LEADER_BOARD= MobileBy.id("com.superlive.liveapp:id/search_src_text");
+    public static final By SAVE_BUTTON= MobileBy.id("com.superlive.liveapp:id/btnSave");
+    public static final By SECOND_OPTION_DISCOVER_COUNTRY_TEXT= MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.TextView");
+    public static final By FAMILY_LEADER_BOARD_INFO_BUTTON= MobileBy.id("com.superlive.liveapp:id/familyLeaderBoardInfoButton");
 }

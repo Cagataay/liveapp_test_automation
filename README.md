@@ -93,3 +93,38 @@
 * SuperLive Mobile Application Search Bar Process Follow and Unfollow
 * SuperLive Mobile Application Search Bar Process With NonLogin Search
 * SuperLive Mobile Application Search Bar Process Global User Search Turkish User
+
+### LeaderBoard Scenarios ###
+
+* Navigating to User Profile in Streamers Tab from Leaderboard in SuperLive Mobile Application, Ranked in the Last 24 Hours
+* Navigating to User Profile in Streamers Tab from Leaderboard in SuperLive Mobile Application, Ranked in the Last 7 Days
+* Navigating to User Profile in Streamers Tab from Leaderboard in SuperLive Mobile Application, Ranked in the All Time
+* Navigating to User Profile in Supporters Tab from Leaderboard in SuperLive Mobile Application, Ranked in the Last 24 Hours
+* Navigating to User Profile in Supporters Tab from Leaderboard in SuperLive Mobile Application, Ranked in the Last 7 Days
+* Navigating to User Profile in Supporters Tab from Leaderboard in SuperLive Mobile Application, Ranked in the All Time
+* Navigating to the First Family in the Families Tab of the Leaderboard in SuperLive Mobile Application as an Anonymous User
+* An Anonymous User Following the Top User in the Streamers Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 24 Hours
+* An Anonymous User Following the Top User in the Streamers Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 7 Days
+* An Anonymous User Following the Top User in the Streamers Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the All Time
+* An Anonymous User Following the Top User in the Supporters Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 24 Hours
+* An Anonymous User Following the Top User in the Supporters Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 7 Days
+* An Anonymous User Following the Top User in the Supporters Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the All Time
+* Clicking the Follow Button for the Top User in the Streamers Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 24 Hours
+* Clicking the Follow Button for the Top User in the Streamers Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 7 Days
+* Clicking the Follow Button for the Top User in the Streamers Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the All Time
+* Clicking the Follow Button for the Top User in the Supporters Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 24 Hours
+* Clicking the Follow Button for the Top User in the Supporters Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 7 Days
+* Clicking the Follow Button for the Top User in the Supporters Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the All Time
+* Scrolling in the Streamers Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 24 Hours
+* Scrolling in the Streamers Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 7 Days
+* Scrolling in the Streamers Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the All Time
+* Scrolling in the Supporters Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 24 Hours
+* Scrolling in the Supporters Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 7 Days
+* Scrolling in the Supporters Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the All Time
+* Scrolling in the Families Tab of the Leaderboard in SuperLive Mobile Application, Ranked in Month Contest
+* Scrolling in the Families Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 7 Days
+* Scrolling in the Families Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the All Time
+* Clicking the Follow Button for the Top User in the Families Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the Last 7 Days
+* Clicking the Follow Button for the Top User in the Families Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the All Time
+* Using the Country Selection Section in the Leaderboard of SuperLive Mobile Application
+* Checking Family System Information in the Families Option of the Leaderboard in SuperLive Mobile Application

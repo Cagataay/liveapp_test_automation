@@ -17,7 +17,7 @@ public class MessagePages extends ElementHelper {
     }
 
     public void checkInboxPageElements() {
-        checkText(INBOX_TITLE, "Inbox");
+        checkText(TEXT_VIEW_TOOLBAR, "Inbox");
         checkVisible(INBOX_ONLINE_STATUS);
         checkVisible(PROFILE_PICTURE);
         checkVisible(LIVESTREAM_BUTTON);
