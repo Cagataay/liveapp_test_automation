@@ -313,4 +313,15 @@ public class ElementLocator {
     public static final By SAVE_BUTTON= MobileBy.id("com.superlive.liveapp:id/btnSave");
     public static final By SECOND_OPTION_DISCOVER_COUNTRY_TEXT= MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.TextView");
     public static final By FAMILY_LEADER_BOARD_INFO_BUTTON= MobileBy.id("com.superlive.liveapp:id/familyLeaderBoardInfoButton");
+
+    public static final By FOLLOWING_NAVBAR = MobileBy.id("com.superlive.liveapp:id/navigation_following");
+    public static final By BUTTON_LOGIN = MobileBy.id("com.superlive.liveapp:id/buttonLogin");
+    public static final By FOLLOWINGS_NONSTREAM = MobileBy.id("com.superlive.liveapp:id/tvNoAvailableStreamMessage");
+    public static final By STREAM_CARD = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.GridView/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout");
+    public static final By PK_BADGE_TEXT = MobileBy.id("com.superlive.liveapp:id/streamBadgeText");
+    public static final By MGS_BADGE_TEXT = MobileBy.id("com.superlive.liveapp:id/groupStreamBadge");
+    public static final By PREMIUM_BADGE = MobileBy.id("com.superlive.liveapp:id/ivPremium");
+    public static final By MESSAGE_NAVBAR = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.view.ViewGroup/android.widget.FrameLayout[4]/android.widget.FrameLayout/android.widget.ImageView");
+
+
 }

@@ -328,4 +328,11 @@ public class MessageStepDefinitions {
 
     @And("check family notification in family chat")
     public void checkFamilyNotificationInFamilyChat() {messagePages.verifyFamilyNotificationInFamilyChat();}
+    @When("Click message Navbar")
+    public void clickMessageNavbar() {
+        messagePages.clickMessageNavbar();
+    }
+
+    @Then("Check message login button")
+    public  void checkMessageLoginButton(){messagePages.checkMessageLoginButton();}
 }

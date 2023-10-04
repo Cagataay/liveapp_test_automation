@@ -128,3 +128,13 @@
 * Clicking the Follow Button for the Top User in the Families Tab of the Leaderboard in SuperLive Mobile Application, Ranked in the All Time
 * Using the Country Selection Section in the Leaderboard of SuperLive Mobile Application
 * Checking Family System Information in the Families Option of the Leaderboard in SuperLive Mobile Application
+
+
+### Followings Scenarios ###
+* SuperLive Mobile Application Followings Navigation Bar Nonlogin User
+* SuperLive Mobile Application Followings Navigation Bar Login User with Nonstream
+* SuperLive Mobile Application Followings Navigation Bar Login User with Single Stream
+* SuperLive Mobile Application Followings Navigation Bar Login User with 2 vs 2 PK
+* SuperLive Mobile Application Followings Navigation Bar Login User with PK
+* SuperLive Mobile Application Followings Navigation Bar Login User with MGS
+* SuperLive Mobile Application Followings Navigation Bar Login User with Premium Stream

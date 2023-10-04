@@ -221,6 +221,15 @@
       Then check media screen texts
       And type media message and send
 
+    @1
+    Scenario: Check message inbox Nonlogin User
+      When Notification permission is granted
+      When Close login overlay
+      When Click message Navbar
+      Then Check message login button
+
+
+
     @familyChat
     Scenario: Go to the family chat and check elements
       When login to app as family member

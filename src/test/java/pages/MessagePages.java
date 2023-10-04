@@ -2,6 +2,7 @@ package pages;
 
 import io.appium.java_client.AppiumDriver;
 import util.ElementHelper;
+import util.ElementLocator;
 
 public class MessagePages extends ElementHelper {
 
@@ -655,5 +656,13 @@ public class MessagePages extends ElementHelper {
 
     public void verifyFamilyNotificationInFamilyChat(){
         checkVisible(FAMILY_NOTIFICATION_IN_CHAT);
+    }
+    public void clickMessageNavbar() {
+        click(ElementLocator.MESSAGE_NAVBAR);
+
+
+    }
+    public void checkMessageLoginButton(){
+        checkVisible(ElementLocator.BUTTON_LOGIN);
     }
 }
