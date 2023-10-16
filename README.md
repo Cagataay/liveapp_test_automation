@@ -138,3 +138,27 @@
 * SuperLive Mobile Application Followings Navigation Bar Login User with PK
 * SuperLive Mobile Application Followings Navigation Bar Login User with MGS
 * SuperLive Mobile Application Followings Navigation Bar Login User with Premium Stream
+
+
+### Public Stream Scenarios ###
+* SuperLive Mobile Application Public Stream Process Not Accept Permission Terms
+* SuperLive Mobile Application Public Stream Process Open Public Stream
+* SuperLive Mobile Application Public Stream Process Open Public Stream Create Wheel
+* SSuperLive Mobile Application Public Stream Process Open Public Stream Microphone Close
+* SuperLive Mobile Application Public Stream Process Open Public Stream Camera Close
+* SuperLive Mobile Application Public Stream Process Open Public Stream Mirror Button
+* SuperLive Mobile Application Public Stream Process Open Public Stream Beauty Filter
+* SuperLive Mobile Application Public Stream Process Open Public Stream Hamburger Settings
+* SuperLive Mobile Application Public Stream Process Open Public Stream Turn Off Gift Sounds
+* SuperLive Mobile Application Public Stream Process Open Public Stream Target Bar
+* SuperLive Mobile Application Public Stream Process Open Public Stream Chat Settings
+* SuperLive Mobile Application Public Stream Process Open Public Stream Gift Sticker
+* SuperLive Mobile Application Public Stream Process Open Public Stream Diamond Count
+* SuperLive Mobile Application Public Stream Process Open Public Stream Viewer Count
+* SuperLive Mobile Application Public Stream Process Open Public Stream Profil Overlay
+* SuperLive Mobile Application Public Stream Process Open Public Stream Chat
+* SuperLive Mobile Application Public Stream Process Open Public Stream PK Button
+* SuperLive Mobile Application Public Stream Process Open Public Stream Guest Button
+* SuperLive Mobile Application Public Stream Process Open Public Stream To Premium Stream
+* SuperLive Mobile Application Public Stream Process Open Public Stream To Share Stream
+* SuperLive Mobile Application Public Stream Process Open Public Stream Close

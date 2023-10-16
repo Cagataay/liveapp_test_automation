@@ -322,6 +322,143 @@ public class ElementLocator {
     public static final By MGS_BADGE_TEXT = MobileBy.id("com.superlive.liveapp:id/groupStreamBadge");
     public static final By PREMIUM_BADGE = MobileBy.id("com.superlive.liveapp:id/ivPremium");
     public static final By MESSAGE_NAVBAR = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.view.ViewGroup/android.widget.FrameLayout[4]/android.widget.FrameLayout/android.widget.ImageView");
+    public static final By START_STREAM = MobileBy.id("com.superlive.liveapp:id/fabButtonStartStream");
+    public static final By ACCEPT_CAMERA_PERMISSION = MobileBy.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button");
+    public static final By ACCEPT_MICROPHONE_PERMISSION = MobileBy.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button");
+    public static final By ACCEPT_NEAR_DEVICE_PERMISSION = MobileBy.id("com.android.permissioncontroller:id/permission_allow_button");
+    public static final By TERMS_USAGE_BUTTON = MobileBy.id("com.superlive.liveapp:id/cbTermsOfUsage");
+    public static final By ACCEPT_TERMS_USAGE_BUTTON = MobileBy.id("com.superlive.liveapp:id/btnAcceptTerms");
+    public static final By PUBLIC_STREAM_CONTAINER = MobileBy.id("com.superlive.liveapp:id/startPublicStreamContainer");
+    public static final By START_PUBLIC_STREAM = MobileBy.id("com.superlive.liveapp:id/btnStartStreaming");
+    public static final By PK_WAR_BUTTON = MobileBy.id("com.superlive.liveapp:id/livestreamStartPk");
+    public static final By CREATE_WHEEL = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[1]/android.widget.ImageButton");
+    public static final By WRITE_WHEEL_NAME = MobileBy.id("com.superlive.liveapp:id/wheelNameEditText");
+    public static final By WHEEL_GIFT_BUTTON = MobileBy.id("com.superlive.liveapp:id/selectGiftLayoutText");
+    public static final By SELECT_GIFT_FOR_WHEEL = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[8]/android.view.ViewGroup/android.widget.ImageView");
+    public static final By CONTINUE_BUTTON_FOR_GIFT = MobileBy.id("com.superlive.liveapp:id/continueButton");
+    public static final By WHEEL_OPTIONS_1 = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[3]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.EditText");
+    public static final By WHEEL_OPTIONS_2 = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[3]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.EditText");
+    public static final By CONTINUE_PREVIEW_BUTTON = MobileBy.id("com.superlive.liveapp:id/continueAndPreviewButton");
+    public static final By PREVIEW_WHEEL = MobileBy.id("com.superlive.liveapp:id/spinningWheel");
+    public static final By ACCEPT_AND_CREATE_WHEEL_BUTTON = MobileBy.id("com.superlive.liveapp:id/acceptAndCreateButton");
+    public static final By SHOW_WHEEL_IN_STREAM = MobileBy.id("com.superlive.liveapp:id/showSpinningWheelButton");
+    public static final By HAMBURGER_MENU_BUTTON = MobileBy.id("com.superlive.liveapp:id/livestreamStreamerHamburgerMenu");
+    public static final By CLOSE_PK_SETTINGS_TUTORIAL = MobileBy.id("com.superlive.liveapp:id/imgClosePkSettingsTutorial");
+    public static final By CLOSE_STICKER_TUTORIAL = MobileBy.id("com.superlive.liveapp:id/imgCloseStickerTutorial");
+    public static final By MICROPHONE_CLOSE_BUTTON = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[2]/android.widget.ImageButton");
+    public static final By TOUCH_OUTSIDE_IN_STREAM = MobileBy.id("com.superlive.liveapp:id/touch_outside");
+    public static final By MICROPHONE_OFF_IMAGE = MobileBy.id("com.superlive.liveapp:id/streamerMicrophoneOffImage");
+    public static final By CAMERA_OFF_BUTTON = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[3]/android.widget.ImageButton");
+    public static final By CIRCULAR_AVATAR = MobileBy.id("com.superlive.liveapp:id/streamerCircularAvatar");
+    public static final By CAMERA_SWITCH_BUTTON = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[4]/android.widget.ImageButton");
+    public static final By MIRROR_BUTTON = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[5]/android.widget.ImageButton");
+    public static final By BEAUTY_FILTER = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[6]/android.widget.ImageButton");
+    public static final By HAMBURGER_SETTINGS = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[7]/android.widget.ImageButton");
+    public static final By PK_SETTINGS_TEXT = MobileBy.id("com.superlive.liveapp:id/tvStreamPkSetting");
+    public static final By GROUP_STREAM_SETTINGS_TEXT = MobileBy.id("com.superlive.liveapp:id/tvGroupStreamSetting");
+    public static final By PK_LENGTH_SETTINGS_TEXT = MobileBy.id("com.superlive.liveapp:id/tvPkLengthSetting");
+    public static final By TURN_OFF_GIFT_VOLUME = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[9]/android.widget.ImageButton");
+    public static final By TURN_ON_GIFT_VOLUME_TEXT = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[9]/android.widget.TextView");
+    public static final By TARGET_BAR_BUTTON = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[8]/android.widget.ImageButton");
+    public static final By TARGET_BAR_TITLE = MobileBy.id("com.superlive.liveapp:id/targetBarTitleEditText");
+    public static final By TARGET_AMOUNT = MobileBy.id("com.superlive.liveapp:id/targetAmountEditText");
+    public static final By STARTING_AMOUNT = MobileBy.id("com.superlive.liveapp:id/startAmountEditText");
+    public static final By TARGET_END_TIME = MobileBy.id("com.superlive.liveapp:id/tvTargetEndTime");
+    public static final By TARGET_BAR_SAVE_BUTTON = MobileBy.id("com.superlive.liveapp:id/tvTargetBarSaveButton");
+    public static final By CALENDER_DATE_CHOOSE = MobileBy.id("android:id/button1");
+    public static final By TARGET_BAR_PREVIEW = MobileBy.id("com.superlive.liveapp:id/customTargetBar");
+    public static final By TARGET_BAR_IN_STREAM = MobileBy.id("com.superlive.liveapp:id/targetBarProgress");
+    public static final By CHAT_SETTINGS_IN_STREAM = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[10]/android.widget.ImageButton");
+    public static final By INSIDE_CHAT_SETTINGS = MobileBy.id("com.superlive.liveapp:id/chatSettingsDescTV");
+    public static final By GIFT_STICKER = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[11]/android.widget.ImageButton");
+    public static final By GIFT_FOR_STICKER = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[8]/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.ImageView[2]");
+    public static final By SELECT_STICKER_GIFT = MobileBy.id("com.superlive.liveapp:id/btnSelectStickerGift");
+    public static final By PREVIEW_STICKER = MobileBy.id("com.superlive.liveapp:id/costContainer");
+    public static final By COMPLETED_STICKER_BUTTON = MobileBy.id("com.superlive.liveapp:id/btnStickerEditComplete");
+    public static final By STICKER_IN_STREAM = MobileBy.id("com.superlive.liveapp:id/stickerGiftStreamViewContainer");
+    public static final By DIAMOND_COUNT = MobileBy.id("com.superlive.liveapp:id/livestreamDiamondsCount");
+    public static final By TOP_GIFTERS_OVERLAY = MobileBy.id("com.superlive.liveapp:id/linearLayoutEmptyView");
+    public static final By VIEWER_COUNT_AREA = MobileBy.id("com.superlive.liveapp:id/livestreamViewersCount");
+    public static final By VIEWERS_CONTAINER = MobileBy.id("com.superlive.liveapp:id/viewersContainer");
+    public static final By STATS_BUTTON = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.HorizontalScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.TextView");
+    public static final By STATS_OVERLAY = MobileBy.id("com.superlive.liveapp:id/viewersContainer");
+    public static final By PROFIL_PHOTO_AREA = MobileBy.id("com.superlive.liveapp:id/livestreamStreamerPicture");
+    public static final By PROFIL_PHOTO_IN_OVERLAY = MobileBy.id("com.superlive.liveapp:id/profilePictureRoundedOverlay");
+    public static final By PROFIL_OVERLAY_INFO = MobileBy.id("com.superlive.liveapp:id/profileOverlayInfoContainer");
+    public static final By STREAM_CHAT = MobileBy.id("com.superlive.liveapp:id/livestreamChat");
+    public static final By WRITE_CHAT_BAR = MobileBy.id("com.superlive.liveapp:id/livestreamMessageText");
+    public static final By SEND_CHAT_MESSAGE = MobileBy.id("com.superlive.liveapp:id/livestreamMessageSend");
+    public static final By CHECK_STREAM_MESSAGE = MobileBy.id("com.superlive.liveapp:id/livestreamMessagesRv");
+    public static final By MESSAGE_OUTSIDE = MobileBy.id("com.superlive.liveapp:id/announcementContainerView");
+    public static final By PK_WAR_OVERLAY = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup");
+    public static final By GUEST_BUTTON = MobileBy.id("com.superlive.liveapp:id/livestreamStreamerGuestRequest");
+    public static final By GUEST_OVERLAY = MobileBy.id("com.superlive.liveapp:id/guestAcceptOverlayEmpty");
+    public static final By PREMIUM_STREAM_BUTTON = MobileBy.id("com.superlive.liveapp:id/livestreamStreamerStartPrivateLivestream");
+    public static final By PREMIUM_STREAM_GIFT = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout/android.widget.GridView/androidx.appcompat.widget.LinearLayoutCompat[8]/android.widget.ImageView");
+    public static final By CONTINUE_PREMIUM_STREAM = MobileBy.id("com.superlive.liveapp:id/btnStartStreaming");
+    public static final By PREMIUM_STREAM_BADGE = MobileBy.id("com.superlive.liveapp:id/livestreamPremiumIcon");
+    public static final By SHARE_STREAM = MobileBy.id("com.superlive.liveapp:id/livestreamShareStreamer");
+    public static final By SHARE_STREAM_OVERLAY = MobileBy.id("android:id/sem_chooser_recycler_direct_share");
+    public static final By CLOSE_STREAM_BUTTON = MobileBy.id("com.superlive.liveapp:id/livestreamCloseBtn");
+    public static final By END_STREAM_BUTTON = MobileBy.id("com.superlive.liveapp:id/finishStreamDialogEndStream");
+    public static final By LIVESTREAM_ENDED_PAGE = MobileBy.id("com.superlive.liveapp:id/imgAvatarBlurred");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
+
+
